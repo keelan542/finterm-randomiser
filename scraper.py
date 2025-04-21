@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
 import string
+import webbrowser
 
 # Define a base url
 base_url = "https://www.investopedia.com/"
@@ -28,8 +29,8 @@ for num_letter in num_letters:
 # Creating instance of UserAgent
 ua = UserAgent()
 
-# Testing searching for a term
-to_search = "ETF"
+# Searching for term
+to_search = "stock"
 found_terms = []
 for page in full_term_paths:
     # Make request for current page e.g. 'A' or 'B' terms
@@ -53,15 +54,16 @@ for page in full_term_paths:
 if (len(found_terms) > 0):
     print("Found the following term(s):")
     for i, term in enumerate(found_terms):
-        print(f"{i}. {term}")
+        print(f"{i}. {term[1]}")
 else:
     print(f"No results for '{to_search}'")
     exit()
 
 # Ask user to choose from results
 choice = input("Choose term: ")
-print("You chose", found_terms[int(choice)])
+chosen_term = found_terms[int(choice)]
+print("You chose", chosen_term[1])
 
 # Make request to page of chosen term
-chosen_term_url = found_terms[int(choice)][0]
-print(chosen_term_url)
+chosen_term_url = chosen_term[0]
+webbrowser.open_new_tab(chosen_term_url)
