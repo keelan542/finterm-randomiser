@@ -25,18 +25,12 @@ for num_letter in num_letters:
     full_term_paths.append(base_url + term_path_generic + num_letter + "-" + str(end_integer))
     end_integer += 1
 
-# test getting html for one path
+# Creating instance of UserAgent
 ua = UserAgent()
-# headers = {'User-Agent': ua.random}
-# test = requests.get(full_term_paths[0], headers=headers)
-# soup = BeautifulSoup(test.content, "html.parser")
-# names = soup.find_all("a", class_="dictionary-top300-list__list")
-# for name in names:
-#     print(name.text)
 
 # Testing searching for a term
-to_search = "Derivative"
-found = False
+to_search = "ETF"
+found_terms = []
 for page in full_term_paths:
     # Make request for current page e.g. 'A' or 'B' terms
     headers = {'User-Agent': ua.random}
@@ -50,9 +44,13 @@ for page in full_term_paths:
 
     # Attempt to find term
     for term in terms:
-        if to_search in term.text.strip():
-            found = True
-        
-    if found: break
+        if to_search.lower() in term.text.strip().lower():
+            found_terms.append(term.text.strip())
 
-print(found)
+# Printing results of search
+if (len(found_terms) > 0):
+    print("Found the following term(s):")
+    for term in found_terms:
+        print(term)
+else:
+    print(f"No results for '{to_search}'")
