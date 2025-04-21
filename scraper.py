@@ -29,4 +29,7 @@ for num_letter in num_letters:
 ua = UserAgent()
 headers = {'User-Agent': ua.random}
 test = requests.get(full_term_paths[1], headers=headers)
-print(test.status_code)
+soup = BeautifulSoup(test.content, "html.parser")
+names = soup.find_all("a", class_="dictionary-top300-list__list")
+for name in names:
+    print(name.text)
