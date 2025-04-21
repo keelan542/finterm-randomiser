@@ -45,12 +45,23 @@ for page in full_term_paths:
     # Attempt to find term
     for term in terms:
         if to_search.lower() in term.text.strip().lower():
-            found_terms.append(term.text.strip())
+            link = term["href"]
+            name = term.text.strip()
+            found_terms.append((link, name))
 
 # Printing results of search
 if (len(found_terms) > 0):
     print("Found the following term(s):")
-    for term in found_terms:
-        print(term)
+    for i, term in enumerate(found_terms):
+        print(f"{i}. {term}")
 else:
     print(f"No results for '{to_search}'")
+    exit()
+
+# Ask user to choose from results
+choice = input("Choose term: ")
+print("You chose", found_terms[int(choice)])
+
+# Make request to page of chosen term
+chosen_term_url = found_terms[int(choice)][0]
+print(chosen_term_url)
