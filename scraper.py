@@ -27,9 +27,32 @@ for num_letter in num_letters:
 
 # test getting html for one path
 ua = UserAgent()
-headers = {'User-Agent': ua.random}
-test = requests.get(full_term_paths[1], headers=headers)
-soup = BeautifulSoup(test.content, "html.parser")
-names = soup.find_all("a", class_="dictionary-top300-list__list")
-for name in names:
-    print(name.text)
+# headers = {'User-Agent': ua.random}
+# test = requests.get(full_term_paths[0], headers=headers)
+# soup = BeautifulSoup(test.content, "html.parser")
+# names = soup.find_all("a", class_="dictionary-top300-list__list")
+# for name in names:
+#     print(name.text)
+
+# Testing searching for a term
+to_search = "Derivative"
+found = False
+for page in full_term_paths:
+    # Make request for current page e.g. 'A' or 'B' terms
+    headers = {'User-Agent': ua.random}
+    page = requests.get(page, headers=headers)
+
+    # Create soup
+    soup = BeautifulSoup(page.content, "html.parser")
+
+    # Get list of terms
+    terms = soup.find_all("a", class_="dictionary-top300-list__list")
+
+    # Attempt to find term
+    for term in terms:
+        if to_search in term.text.strip():
+            found = True
+        
+    if found: break
+
+print(found)
