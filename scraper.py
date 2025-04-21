@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+
 import string
 
 # Define a base url
@@ -22,3 +24,9 @@ full_term_paths = []
 for num_letter in num_letters:
     full_term_paths.append(base_url + term_path_generic + num_letter + "-" + str(end_integer))
     end_integer += 1
+
+# test getting html for one path
+ua = UserAgent()
+headers = {'User-Agent': ua.random}
+test = requests.get(full_term_paths[1], headers=headers)
+print(test.status_code)
