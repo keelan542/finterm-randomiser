@@ -39,5 +39,9 @@ soup = BeautifulSoup(page.content, "html.parser")
 # Get list of terms
 terms = soup.find_all("a", class_="dictionary-top300-list__list")
 
-for term in terms:
-    print(term.text.strip(), term['href'])
+# Randomly choose term
+term_index = random.randint(0, len(terms))
+
+# Open page of random term
+term_url = terms[term_index]["href"]
+webbrowser.open_new_tab(term_url)
