@@ -1,0 +1,2939 @@
+[
+  [
+    "Interactive Brokers does maintain the use of creating contracts in both the Trader Workstation and Client Portal APIs. The default structure will allow the individual to typically reference the ticker symbol, security type, exchange, and currency. The best practice recommended by Interactive Brokers for both platforms is to use only the contract identifier and the Exchange instead.",
+    [
+      "brokers",
+      "client",
+      "contract",
+      "currency",
+      "exchange"
+    ]
+  ],
+  [
+    "Symbol: String The CUSIP of the bond. SecType: String Always specify as BOND. Exchange: String Smart may be specified. Specify the base currency the BOND is traded with.",
+    [
+      "bond",
+      "currency",
+      "exchange",
+      "smart"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the symbol of the CFD. SecType: String, Specify CFD currency. Exchange: String,. Specify SMART currency. Plain text Copy to clipboard Open code in new window",
+    [
+      "currency",
+      "exchange",
+      "open",
+      "smart"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the symbol of the commodity. SecType: String, Specify CMDTY. Exchange: String,. Specify SMART. Currency: String; Specify base currency the commodity is traded with. Plain text Copy to clipboard Open code in new window.",
+    [
+      "currency",
+      "exchange",
+      "open",
+      "smart"
+    ]
+  ],
+  [
+    "Specify the CUSIP, FIGI, or ISIN code of the instrument SecIdType: String. Supports 'CUSIP', 'FIGI', or 'ISIN' Exchange: String, Specify SMART. Open code in new window EnlighterJS 3 Syntax Highlighter",
+    [
+      "exchange",
+      "open",
+      "smart"
+    ]
+  ],
+  [
+    "Contract ID (conid) will vary for Cryptocurrencies based on their Listing Exchange. Bitcoin held at PAXOS (479624278) will have a different conid than the listing at Zerohash (541686651) This behavior will apply to all other coins.",
+    [
+      "contract",
+      "exchange"
+    ]
+  ],
+  [
+    "Symbol: String. SecType: String, Specify FUT. Exchange: String,. Currency: String., Enter the currency which the future is traded. LastTradeDateOrContractMonth: String; If there are multiple expiries in the same month, exact date must be specified.",
+    [
+      "currency",
+      "exchange"
+    ]
+  ],
+  [
+    "Users may choose to use Continuous Futures as well, which automatically presents the front future contract for customers to request historical data. This security type can only be used in the TWS API.",
+    [
+      "api",
+      "contract",
+      "data",
+      "futures",
+      "historical"
+    ]
+  ],
+  [
+    "TWS API users can refer to expired Futures contracts by including the 'IncludeExpired' field. This will permit users to review historical market data for contracts that have expired within the last 2 years. This functionality is not supported in the web api.",
+    [
+      "api",
+      "data",
+      "field",
+      "futures",
+      "historical"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the underlying symbol of the futures option. SecType: String; Specify FOP. Exchange: String, Specify exchange where underlying is traded. LastTradeDateOrContractMonth: String,. Enter the month the contract expires. In the event there are multiple expiries in the same month, exact date must be specified.",
+    [
+      "contract",
+      "exchange",
+      "futures",
+      "option"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the target currency. For orders, this will dictate the quantity value. SecType: Specify CASH. Exchange: String for Virtual Forex or IDEALPRO for true forex trading.",
+    [
+      "currency",
+      "exchange",
+      "forex",
+      "orders",
+      "trading"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the symbol for the index. SecType: String; Specify IND; Exchange: String, Currency: String,. Plain text. Open code in new window.",
+    [
+      "currency",
+      "exchange",
+      "open"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the symbol for the mutual fund. SecType: String; Specify FUND; Exchange: String, FUNDSERV is the most common. Currency: String: Specify base currency of the fund. Note: It is recommended to understand mutual fund orders on TWS UI before implementing via API.",
+    [
+      "api",
+      "currency",
+      "exchange",
+      "fund",
+      "mutual"
+    ]
+  ],
+  [
+    "LastTradeDateOrContractMonth: Enter the month the contract expires. In the event there are multiple expiries in the same month, exact date must be specified. Enter the strike price of the derivative.",
+    [
+      "contract"
+    ]
+  ],
+  [
+    "Symbol: String. Specify the symbol for the Stock or ETF. Exchange: String if smart routing is available. Otherwise, a direct exchange may be specified. Currency: String to specify the base currency of the stock. PrimaryExchange:Specify the primary listing exchange of the instrument.",
+    [
+      "currency",
+      "etf",
+      "exchange",
+      "routing",
+      "smart"
+    ]
+  ],
+  [
+    "Symbol: Specify the symbol for the Stock or ETF. SecType: Specified STK. Exchange: Smart routing is available. Otherwise, a direct exchange may be specified. Currency:Specify the base currency of the stock.",
+    [
+      "currency",
+      "etf",
+      "exchange",
+      "routing",
+      "smart"
+    ]
+  ],
+  [
+    "Warrants, like options, require an expiration date, a right, a strike and a multiplier. For some warrants it will be necessary to define a localSymbol or conId to uniquely identify the contract.",
+    [
+      "contract",
+      "options"
+    ]
+  ],
+  [
+    "Spread contracts combine two or more instruments. To define a combination contract it is required to know the conId of the contract in question.",
+    [
+      "contract",
+      "spread"
+    ]
+  ],
+  [
+    "With combo orders, the 'ComboLegs' field must be added. These require a conid, exchange, ratio, and an action for every ComboLeg on the order. Futures spreads can also be defined as Smart-routed (non-guaranteed) combos.",
+    [
+      "exchange",
+      "field",
+      "futures",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Combination orders or spread orders may also be placed using the same orders endpoint. The conidex field is a string representation of our combo order parameters. For US Stock Combos, only the spread_conid needs to be submitted. For all other countries, you will need to use the format 'spread-conid@exchange'",
+    [
+      "exchange",
+      "field",
+      "order",
+      "orders",
+      "spread"
+    ]
+  ],
+  [
+    "ActiveX is a legacy technology developed by Microsoft. It essentially allows applications to share information with each other. The current ActiveX API for Excel wraps the C#/.NET API and is provided as an open source project TWSLib.",
+    [
+      "activex",
+      "api",
+      "open"
+    ]
+  ],
+  [
+    "The sample ActiveX spreadsheet provided with the API is meant only as a demonstration of API functionality. While it is designed with examples of almost all API functions, it does not have the necessary functionality to handle problems that may occur during trading. Interactive Brokers does not offer any programming assistance.",
+    [
+      "activex",
+      "api",
+      "brokers",
+      "interactive",
+      "trading"
+    ]
+  ],
+  [
+    "The TWS API Excel ActiveX Implementation is built around the Component Object Model (COM) architecture. The COM object and it's derivatives like ActiveX and OLE are built exclusively into Microsoft Windows and are reliant on the Operating System's Registry structure.",
+    [
+      "activex",
+      "api",
+      "model",
+      "object",
+      "tws"
+    ]
+  ],
+  [
+    "Clients who may have installed the API into a unique location may receive an #NA message in each ActiveX cell. The #NA reference may be failing to call an installed DLL essential for the connection. To resolve this error, please follow the steps listed below.",
+    [
+      "activex",
+      "api",
+      "connection"
+    ]
+  ],
+  [
+    "This guide is intended to introduce new customers to the ActiveX Excel Sample Sheet and introduce the systems available of our underlying API. Sample spreadsheet applications are distributed with the API download for each of the API technologies (RTD Server, ActiveX, DDE).",
+    [
+      "activex",
+      "api",
+      "dde",
+      "rtd"
+    ]
+  ],
+  [
+    "The Interactive Brokers ActiveX API is rather unique in the sense that it demands the most Visual Basic knowledge to operate the API of our three Excel offerings. The ActiveX component of this API comes from the communication between C# and Visual Basic. As with our other source code, this is used to interpret data from a TCP socket bridge connection to the Trader Workstation.",
+    [
+      "activex",
+      "api",
+      "basic",
+      "brokers",
+      "connection"
+    ]
+  ],
+  [
+    "As stated within the Architecture section, the Excel ActiveX API is built on the underlying C# API with standard Visual Basic Translations. For additional insight into the underlying methods, see the TWS API Documentation.",
+    [
+      "activex",
+      "api",
+      "basic",
+      "tws",
+      "visual"
+    ]
+  ],
+  [
+    "The Dynamic Data Exchange protocol is a method of inter-process communication developed by Microsoft. The DDE API is available for Windows computers to create a means of communication between Microsoft Excel and TWS or IB Gateway. This allows users to make calls to the standard API library using Visual Basic.",
+    [
+      "api",
+      "basic",
+      "data",
+      "dde",
+      "exchange"
+    ]
+  ],
+  [
+    "By design, Microsoft Excel gives precedence to the user interface over the data connection to other applications. Other programs running on the same computer which use DDE can interfere with the communication.",
+    [
+      "connection",
+      "data",
+      "dde"
+    ]
+  ],
+  [
+    "Excel DDE, Dynamic Data Exchange, is a system which produces a sub-task in order to exchange information to and from a given program. This data exchange system is essential for the functionality of our API offering. The macOS App Sandbox limit's an apps ability to create additional tasks required for dynamic data exchange.",
+    [
+      "api",
+      "data",
+      "dde",
+      "exchange",
+      "limit"
+    ]
+  ],
+  [
+    "In many cases, customers might see a response for a given market data column which displays 'N/A', '0', '-1' in some of their cells. While you may have part of the required market data subscription on the instrument, you may not have all of it. You might also encounter this by requesting too many symbols simultaneously.",
+    [
+      "data",
+      "market",
+      "response",
+      "subscription"
+    ]
+  ],
+  [
+    "The DDE Socket Bridge is an essential component of the Excel DDE API library. This governs all communication between the Trader Workstation and Excel using the JDDE implementation.",
+    [
+      "api",
+      "dde",
+      "socket"
+    ]
+  ],
+  [
+    "You are able to modify the ClientID, Host IP, Socket Port, or even the Service Name. The default ports supplied by Interactive Brokers are as follows: TWS Live Account: 7496 (Socket Bridge's default value) TWS Paper Account:7497 IB Gateway Live Account. 4001 IB Gateway Paper Account.: 4002.",
+    [
+      "account",
+      "brokers",
+      "clientid",
+      "gateway",
+      "interactive"
+    ]
+  ],
+  [
+    "The most common reason for this behavior is that the DDE socket bridge is not running at the time of the request. This is typical where Java is not installed properly on the machine. Both the command prompt and white java window must remain open at all times.",
+    [
+      "dde",
+      "java",
+      "open",
+      "request",
+      "socket"
+    ]
+  ],
+  [
+    "The Excel DDE is implemented using the open source Java - DDE interoperability library, JDDE. The socket bridge is used as a translation tool between the DDE implemented by Visual Basic and the Trader Workstation. Users who wish to modify how data behaves within Excel itself, such as how or where data is set, would need to make modifications here.",
+    [
+      "basic",
+      "data",
+      "dde",
+      "java",
+      "open"
+    ]
+  ],
+  [
+    "Requests made through the Excel DDE are handled through two primary methods: An Excel Formula Structure or a DDEPoke method call. Requests with the TWS API that do not take any arguments are all made using an Excel Formula request using the DDERequest Method call. For requests that contain at least one or more argument, the request must be made using the Visual Basic DDE Method Call.",
+    [
+      "api",
+      "basic",
+      "dde",
+      "method",
+      "request"
+    ]
+  ],
+  [
+    "Requests made using our Excel DDE will respond in single variable structures. In other scenarios, requests will handle responses through an array passed to Visual Basic. It is possible to view live quotes for multiple products updating real time within Excel.",
+    [
+      "basic",
+      "dde",
+      "variable",
+      "visual"
+    ]
+  ],
+  [
+    "For nearly all instrument-based requests, you will need to create a contract. The standard format of a contract is built for the request, and will utilize an underscore. The contract is then concluded with a final '~/''",
+    [
+      "contract",
+      "request"
+    ]
+  ],
+  [
+    "This guide is intended to introduce new customers to the DDE Excel Sample Sheet and introduce the systems available of our underlying API. Sample spreadsheet applications are distributed with the API download for each of the API technologies (RTD Server, ActiveX, DDE)",
+    [
+      "activex",
+      "api",
+      "dde",
+      "rtd"
+    ]
+  ],
+  [
+    "As stated within the Architecture section, the Excel DDE API is built on the underlying Java API with standard Visual Basic Translations. For additional insight into the underlying methods, see the TWS API Documentation.",
+    [
+      "api",
+      "basic",
+      "dde",
+      "java",
+      "tws"
+    ]
+  ],
+  [
+    "This guide is intended to introduce new customers to the DDE Excel example use cases. You can use 'SecDefOptParams' tab to request Option Chain live market data. The images shown in the right-side show how to request IBM STK Option data.",
+    [
+      "data",
+      "dde",
+      "market",
+      "option",
+      "request"
+    ]
+  ],
+  [
+    "The Interactive Brokers Excel RTD offering is a .NET offering for IBKR Pro customers. This is a unique API implementation designed to efficiently retrieve live market data through Excel.",
+    [
+      "api",
+      "brokers",
+      "data",
+      "ibkr",
+      "interactive"
+    ]
+  ],
+  [
+    "The Excel RTD offering can only retrieve streaming market data. There is no other established utility for this offering. Sample spreadsheet applications are distributed with the API download for each of the API technologies.",
+    [
+      "api",
+      "data",
+      "market",
+      "rtd"
+    ]
+  ],
+  [
+    "The TWS API Excel RTD Implementation is built around the Component Object Model (COM) architecture. The COM object and it's derivatives like ActiveX and OLE (Compound Documents) are built exclusively into Microsoft Windows. Given the underlying technology of RTD requires Windows-specific architecture regarding it's registry, the functionality is not available in the Mac and Unix distribution of the TWSAPI offering.",
+    [
+      "activex",
+      "api",
+      "model",
+      "object",
+      "rtd"
+    ]
+  ],
+  [
+    "In many cases, customers might see a response for a given market data column which displays 'N/A', '0', '-1' in some of their cells. While you may have part of the required market data subscription on the instrument, you may not have all of it. You might also encounter this by requesting too many symbols simultaneously.",
+    [
+      "data",
+      "market",
+      "response",
+      "subscription"
+    ]
+  ],
+  [
+    "Clients who may have installed the API into a unique location may receive an #NA message in each RTD cell. The API may be failing to call an installed DLL essential for the connection with Trader Workstation. To resolve this error, please follow the steps listed below.",
+    [
+      "api",
+      "connection",
+      "rtd"
+    ]
+  ],
+  [
+    "The 50 message/second API limit applies to RTD Server in the same way as other socket-based API technologies. So the Excel spreadsheet can send no more than 50 messages/second to TWS. Each subscription or cancellation request counts as 1 message.",
+    [
+      "api",
+      "limit",
+      "request",
+      "rtd",
+      "socket"
+    ]
+  ],
+  [
+    "It is important to mention that our real time market data is not tick-by-tick, meaning you will not obtain every single price movement happening in the market. Instead, real time data is given as snapshots generated at a fixed given pace.",
+    [
+      "data",
+      "market",
+      "tick"
+    ]
+  ],
+  [
+    "Microsoft RTD interface has a ThrottleInterval property that determines the interval between data refreshes. By default, the value is set to 2000 milliseconds, which means Excel waits at least 2000 milliseconds between checks for updates. You are able to manually change the Throttle Interval to a smaller value* so as to increase the refresh rate.",
+    [
+      "data",
+      "rtd"
+    ]
+  ],
+  [
+    "TwS Rtd Server connects to socket port 7496 by default. No more than 50 messages can be sent from an API application such as RTD Server to TWS per second.",
+    [
+      "api",
+      "port",
+      "rtd",
+      "socket",
+      "tws"
+    ]
+  ],
+  [
+    "The default Excel RTD API library is made up of at least four primary components, with an optional fifth component for those not using a Live TWS session. The basic components of a the RTD formula are ProgID, Server, Ticker, Topic and Connection parameters.",
+    [
+      "api",
+      "basic",
+      "connection",
+      "rtd",
+      "tws"
+    ]
+  ],
+  [
+    "The TWS RTD Server API directly refers to the C# API Client, so it connects to TWS (or IB Gateway) the same as C# via the socket. The Host IP Address is the IP address where your TWS is running on. The Client ID is an identification for each API connection.",
+    [
+      "api",
+      "client",
+      "connection",
+      "gateway",
+      "ip"
+    ]
+  ],
+  [
+    "The ticker is a means of defining a contract for a given market data request. This will incorporate the symbol, security type, exchange, currency, and potentially more in some shape. This can be achieved in a single string, known as Simple Syntax, or through multiple definitions known as Complex Syntax.",
+    [
+      "contract",
+      "currency",
+      "data",
+      "exchange",
+      "market"
+    ]
+  ],
+  [
+    "The Topic specifies the tick types returned values after requesting market data. Each cell in Excel will correspond to a given Topic string to represent the given dataset. If no Topic is specified, 'Last' value will be returned by default. By default, all Generic Tick Types are automatically requested.",
+    [
+      "data",
+      "market",
+      "tick"
+    ]
+  ],
+  [
+    "A demonstration of RTD formulas is provided at https://www.interactivebrokers.com/campus/ibkr-api-page/excel-rtd/#rtd-contract-samples categorized by security type as well as syntax type. This will help to provide context on how a unique contract type should be formatted.",
+    [
+      "api",
+      "contract",
+      "ibkr",
+      "rtd"
+    ]
+  ],
+  [
+    "Some customers may find that as opposed to generic ticks or live streaming data, they may want to remove or reduce the number of ticks. It is even possible to change RTD to report snapshot data instead. This section will document the process to change these underlying values requested.",
+    [
+      "data",
+      "rtd",
+      "snapshot"
+    ]
+  ],
+  [
+    "This guide is intended to introduce new customers to the RTD Excel Sample Sheet and introduce the systems available of our underlying API. Sample spreadsheet applications are distributed with the API download for each of the API technologies (RTD Server, ActiveX, DDE) The sample applications are intended as simple demonstrations of API functionality for third party programmers. They do not have robust error handling functionality and are not intended to be used as production level trading tools.",
+    [
+      "activex",
+      "api",
+      "dde",
+      "rtd",
+      "trading"
+    ]
+  ],
+  [
+    "As stated within the Architecture section, the Excel RTD API is built on the underlying Java API with standard Visual Basic Translations. For additional insight into the underlying methods, see the TWS API Documentation.",
+    [
+      "api",
+      "basic",
+      "java",
+      "rtd",
+      "tws"
+    ]
+  ],
+  [
+    " FIX (Financial Information eXchange) is an open, industry-standard protocol for the electronic transmission of orders and related data. Use of FIX requires an integration process lead by our FIX Engineering team. Interactive Brokers requires Institutional and Enterprise clients to arrange for dedicated connectivity to IBKR infrastructure.",
+    [
+      "brokers",
+      "data",
+      "exchange",
+      "fix",
+      "ibkr"
+    ]
+  ],
+  [
+    "If you are a vendor of an OMS platform and would like to support routing of orders to Interactive Brokers, please contact our FIX Engineering team at fixengineering@ibkr.com. FIX for OMS Vend",
+    [
+      "brokers",
+      "fix",
+      "ibkr",
+      "interactive",
+      "orders"
+    ]
+  ],
+  [
+    "All FIX tags from 5000-9999 are reserved for custom implementations. It is recommended to review our use of custom tags as outlined in our FIX Implementation Manual.",
+    [
+      "fix"
+    ]
+  ],
+  [
+    "Most* securities require a Level 1, top of book, market data subscription to receive market data. This is required for all users at Interactive Brokers retrieving market data through the API. Forex and Cryptocurrencies do not require any additional market data subscriptions to receiveMarket data.",
+    [
+      "api",
+      "brokers",
+      "data",
+      "forex",
+      "interactive"
+    ]
+  ],
+  [
+    "In order to receive market data through the API, there are a few minimum requirements before data can be received. Opened IB Account (Demo accounts cannot subscribe to data). Must use an IBKR PRO account type Clients should have $500 USD in their account in addition to the cost of all market data subscriptions.",
+    [
+      "account",
+      "api",
+      "data",
+      "ibkr",
+      "market"
+    ]
+  ],
+  [
+    "The minimum requirements plus the cost of the subscription are required to have the data activated. Market Data services will be terminated once clients receive Market Data Violator notice provided the equity falls below USD 500.00.",
+    [
+      "data",
+      "market",
+      "subscription"
+    ]
+  ],
+  [
+    "For traders seeking support with market data subscriptions, please create a ticket with our Market Data team. The Market Data Subscription section is listed under the 'Account Services' topic.",
+    [
+      "account",
+      "data",
+      "market",
+      "subscription"
+    ]
+  ],
+  [
+    "Market Data API Acknowledgement is required for all users who intend to request market data through any API platform. Proceeding without this form being acknowledged, users will receive errors from their market data requests stating that market data is not subscribed. This will effect users who trade programmatically with either the TWS API or the Web API.",
+    [
+      "api",
+      "data",
+      "market",
+      "request",
+      "tws"
+    ]
+  ],
+  [
+    "Most exchanges and data vendors classify clients as either non-professional or professional. Corporations, limited liability companies, partnerships and any account where the data is used for more than personal investment purposes is deemed to be professional. Private persons may be considered professional if they are registered as a security or investment advisor.",
+    [
+      "account",
+      "advisor",
+      "data"
+    ]
+  ],
+  [
+    "Market data is provisioned on a per-user basis. This means that even though you may have a market data subscription on one user in an account, a second user on the same account does not gain those permissions.",
+    [
+      "account",
+      "data",
+      "market",
+      "subscription"
+    ]
+  ],
+  [
+    "Each Live account structure has access to a Paper account with unique credentials. accessing Third Party Platforms or the Client Portal API require the direct Paper credentials.",
+    [
+      "account",
+      "api",
+      "client",
+      "portal"
+    ]
+  ],
+  [
+    "IBKR allows for free on-platform data; however, data on the API is considered off-platform. Exchanges maintain different licensing requirements and agreements for off- platform market data viewing.",
+    [
+      "api",
+      "data",
+      "ibkr",
+      "market"
+    ]
+  ],
+  [
+    "Market data subscriptions are paid once, every calendar month. After subscribing to market data, no additional usage fees or other costs will be incurred.",
+    [
+      "data",
+      "market"
+    ]
+  ],
+  [
+    "All users at Interactive Brokers are given a set amount of market data lines. Market data lines dictate how much market data can be retrieved simultaneously from a given user. This Includes all data pulled through Trader Workstation watchlist and the API.",
+    [
+      "api",
+      "brokers",
+      "data",
+      "interactive",
+      "market"
+    ]
+  ],
+  [
+    "The OPRA market data subscription will provide options data for all options in the United States. Options Greeks data is based on the underlying symbols. Indices sometimes require separate market data subscriptions from the derivatives.",
+    [
+      "data",
+      "indices",
+      "market",
+      "options",
+      "subscription"
+    ]
+  ],
+  [
+    "For stocks, there are individual exchange-specific market data subscriptions necessary to receive streaming quotes. Each subscription is added a la carte and has a separate market data fee. There is also a 'US Securities Snapshot Bundle' subscription which does not provide streaming data but which allows for real time calculated snapshots of US market NBBO prices.",
+    [
+      "data",
+      "exchange",
+      "market",
+      "nbbo",
+      "snapshot"
+    ]
+  ],
+  [
+    "Interactive Brokers support is often asked about which subscription is best for each individual. The table below describes some of the more common subscriptions along with what they cover. If you have direct questions for an exact symbol, please try our Market Data Assistant for assistance.",
+    [
+      "brokers",
+      "data",
+      "interactive",
+      "market",
+      "subscription"
+    ]
+  ],
+  [
+    "API users can subscribe to the following 'Alternative Display' market data packs for getting Chinese Market Data via API and TWS. Please note that Non-Professional and Professional clients may have different available market data.",
+    [
+      "api",
+      "data",
+      "market",
+      "tws"
+    ]
+  ],
+  [
+    "IB only supports client to get News data from the following 4 News providers: Briefing.com, Dow Jones Newsletters, Benzinga and Dow Jones. To subscribe 'Benzinga Breaking News via API', please Live Account IB Client Portal.",
+    [
+      "account",
+      "api",
+      "client",
+      "data",
+      "portal"
+    ]
+  ],
+  [
+    "NASDAQ/ISLAND requires an additional market data subscription in order for clients to retrieve market depth off-platform. Clients must subscribe to the following: All US level 1 US Equity market data subscriptions. 'US Equity and Options Add-On Streaming Bundle'",
+    [
+      "data",
+      "market",
+      "options",
+      "order",
+      "subscription"
+    ]
+  ],
+  [
+    "This page is used to document all available order types available through the Interactive Brokers API. The values documented showcase the minimum values needed to create the order. Additional parameters can be used or combined in some cases.",
+    [
+      "api",
+      "brokers",
+      "interactive",
+      "order"
+    ]
+  ],
+  [
+    "It is important to test the order type idea manually in TWS before writing the API execution tactic. Paper Trading Accounts are based on a simulated environment, and as a result, order execution behavior is not indicative of real world trading conditions. Interacive Brokers APIs do not support fractional or cash quantity trading.",
+    [
+      "api",
+      "brokers",
+      "execution",
+      "order",
+      "trading"
+    ]
+  ],
+  [
+    "Because Cryptocurrency at Interactive Brokers are managed through external groups like ZEROHASH and PAXOS, the available order types and behaviors are slightly different from average. The lists below indicate what is available for BUY and SELL orders when using Cryptocurrencies. Please be aware that no other order types are available for Crypto orders.",
+    [
+      "brokers",
+      "interactive",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Interactive Brokers' API offerings do maintain their own pacing limitations. This is known as the Order Efficiency Ratio. While this does not typically effect regular traders, automated trading systems may be impacted.",
+    [
+      "api",
+      "brokers",
+      "interactive",
+      "order",
+      "trading"
+    ]
+  ],
+  [
+    "It is important to note that while this page does document both our TWS API and CPAPI, not all order types are available in both platforms. Orders labeled in Python, Java, C++, C#, and Visual Basic are for use in the TWSAPI.",
+    [
+      "api",
+      "basic",
+      "java",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "This section will explore all available orders that can be accomplished in a single standard request structure. This includes typical behaviors such as Market, Limit, and Stop orders.",
+    [
+      "limit",
+      "market",
+      "orders",
+      "request",
+      "stop"
+    ]
+  ],
+  [
+    "An Auction order is entered into the electronic trading system during the pre-market opening period for execution at the Calculated Opening Price (COP) If your order is not filled on the open, the order is re-submitted as a limit order with the limit price set to the COP or the best bid/ask after the market opens. For option orders routed to the Boston Options Exchange (BOX) you may elect to participate in the BOX's price improvement auction in pennies.",
+    [
+      "auction",
+      "exchange",
+      "execution",
+      "limit",
+      "market"
+    ]
+  ],
+  [
+    "The Block attribute is used for large volume option orders on ISE that consist of at least 50 contracts. To execute large-volume orders over time without moving the market, use the Accumulate/Distribute algorithm.",
+    [
+      "market",
+      "option",
+      "orders",
+      "volume"
+    ]
+  ],
+  [
+    "A Box Top order executes as a market order at the current best price. If the order is only partially filled, the remainder is submitted as a limit order. Products: OPT (BOX only) More on Box Top Orders.",
+    [
+      "limit",
+      "market",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Combination orders include options, stock and futures legs. Stock legs can be included if the order is routed through SmartRouting. Products: OPT, STK, FUT.",
+    [
+      "futures",
+      "options",
+      "order",
+      "orders",
+      "stock"
+    ]
+  ],
+  [
+    "An Discretionary order is a limit order submitted with a hidden 'discretionary' amount off the limit price which may be used to increase the price range. The market sees only the limit order.",
+    [
+      "limit",
+      "market",
+      "order"
+    ]
+  ],
+  [
+    "Forex orders can be placed in denomination of second currency in pair using cashQty field.",
+    [
+      "currency",
+      "field",
+      "forex",
+      "orders"
+    ]
+  ],
+  [
+    "Limit Orders: A Limit order is an order to buy or sell at a specified price or better. An LIT order is similar to a stop limit order, except that an LIT sell order is placed above the current market price. A Limit-on-Open (LOO) order combines a limit order with the OPG time in force to create an order that is submitted at the market's open, and that will only execute at the specified limit price.",
+    [
+      "limit",
+      "market",
+      "open",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "A Market order is an order to buy or sell at the market bid or offer price. An MIT order is similar to a stop order, except that an MIT sell order is placed above the current market price. A Market On Open (MOO) combines a market order with the OPG time in force to create an order that is automatically submitted at market's open.",
+    [
+      "market",
+      "open",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "Passive Relative orders provide a means for traders to seek a less aggressive price than the National Best Bid and Offer (NBBO) The order price is automatically adjusted as the markets move to keep the order less aggressive.",
+    [
+      "nbbo",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Pegged-to-Primary orders provide a means for traders to seek a more aggressive price than the National Best Bid and Offer (NBBO) A Pegged to Stock order continually adjusts the option order price by the product of a signed user-define delta and the change of the option's underlying stock price.",
+    [
+      "nbbo",
+      "option",
+      "order",
+      "orders",
+      "stock"
+    ]
+  ],
+  [
+    "Create combination orders that include options, stock and futures legs. Stock legs can be included if the order is routed through SmartRouting. Products: OPT, STK, FUT.",
+    [
+      "futures",
+      "options",
+      "order",
+      "orders",
+      "stock"
+    ]
+  ],
+  [
+    "Combination orders include options, stock and futures legs. Stock legs can be included if the order is routed through SmartRouting. Products: OPT, STK, FUT.",
+    [
+      "futures",
+      "options",
+      "order",
+      "orders",
+      "stock"
+    ]
+  ],
+  [
+    "A Stop order is an instruction to submit a buy or sell market order if and when the user-specified stop trigger price is attained or penetrated. A Stop order not guaranteed a specific execution price and may execute significantly away from its stop price. Products: CFD, CASH, FUT, FOP, OPT, STK, WAR.",
+    [
+      "execution",
+      "market",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "A Stop-Limit order is an instruction to submit a buy or sell limit order when the user-specified stop trigger price is attained or penetrated. The order has two basic components: the stop price and the limit price.",
+    [
+      "basic",
+      "limit",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "A Stop with Protection order combines the functionality of a stop limit order with a market with protection order. The order is set to trigger at a specified stop price.",
+    [
+      "limit",
+      "market",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "Sweep to Fill orders are useful when a trader values speed of execution over price. A sweep-to-fill order identifies the best price and the exact quantity offered/available at that price, and transmits the corresponding portion of your order.",
+    [
+      "execution",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Trailing Stop: Specifies the distance that your order's stop price will maintain away from the market. A Trailing Stop order ticket must include exactly one of the following two forms of Trail Offset: absolute or relative.",
+    [
+      "market",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "One of the following class attributes must be supplied with the order ticket. The value assigned to trailingPercent will be interpreted as a true percent, e.g., trailingPercent = 0.50 becomes 0.0050.",
+    [
+      "class",
+      "order"
+    ]
+  ],
+  [
+    " CP API: Trailing Stop:Trail Offset Required. One of the following approaches to Trail Offset specification must be used with the order ticket. Stop Price: 'price'",
+    [
+      "api",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "Trailing Stop Limit is designed to allow an investor to specify a limit on the maximum possible loss, without setting a limit. A 'Buy' trailing stop limit order is the mirror image of a sell trailed stop limit.",
+    [
+      "limit",
+      "order",
+      "stop"
+    ]
+  ],
+  [
+    "Investors are able to create and enter Volatility-type orders for options and combinations rather than price orders. Option traders may wish to trade and position for movements in the price of the option determined by its implied volatility.",
+    [
+      "option",
+      "options",
+      "orders"
+    ]
+  ],
+  [
+    "You can attach one-time adjustments to stop, stop limit, trailing stop and trailing stop limit orders. When you attach an adjusted order, you set a trigger price that triggers a modification of the original (or parent) order, instead of triggering order transmission.",
+    [
+      "limit",
+      "order",
+      "orders",
+      "stop"
+    ]
+  ],
+  [
+    "Hedging orders are similar to Bracket Orders. With hedging order, a child order is submitted only on execution of the parent. Orders can be hedged by an attached forex trade, Beta hedge, or Pair Trade.",
+    [
+      "bracket",
+      "execution",
+      "forex",
+      "hedge",
+      "order"
+    ]
+  ],
+  [
+    "Bracket Orders are designed to help limit your loss and lock in a profit by 'bracketing' an order with two opposite-side orders. One key thing to keep in mind is to handle the order transmission accurately. There is always a risk that at least one of the orders gets filled before the entire bracket is sent.",
+    [
+      "bracket",
+      "limit",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "The One-Cancels All (OCA) order type allows an investor to place multiple and possibly unrelated orders assigned to a group. The aim is to complete just one of the orders, which in turn will cause TWS to cancel the remaining orders. Multiple OCA types cannot be used in a single OCA Group.",
+    [
+      "order",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "The way in which remaining orders should be handled after an execution can be configured as indicated in the table. Multiple OCA types cannot be used in a single OCA Group.",
+    [
+      "execution",
+      "orders"
+    ]
+  ],
+  [
+    "There are 6 unique Order Conditions that can be applied to a given order: Price, Time, Margin, Execution, Volume, and PercentChange. More than one condition can be attached to an individual order using to be Inclusive, 'AND', or Exclusive, 'OR' More information on Order Conditions can be found here.",
+    [
+      "execution",
+      "order",
+      "volume"
+    ]
+  ],
+  [
+    "Customers can direct non-marketable U.S. stock orders to the IBKRATS destination to add liquidity. Orders directed to IB KRATS are tagged as 'not held' orders, and are posted in IBKR's order book.",
+    [
+      "ibkr",
+      "order",
+      "orders",
+      "stock"
+    ]
+  ],
+  [
+    "Algo orders are additional parameters that can be used in addition to a standing order. IB ALGO orders are only supported during regular trading hours. Orders submitted with the outsideRth field set to 'true' will be rejected.",
+    [
+      "algo",
+      "field",
+      "order",
+      "orders",
+      "trading"
+    ]
+  ],
+  [
+    "The Accumulate/Distribute algo can help you to achieve the best price for a large volume order without being noticed in the market. By slicing your order into smaller randomly-sized order increments that are released at random time intervals within a user-defined time period, the algo allows the trading of large blocks of stock.",
+    [
+      "algo",
+      "market",
+      "order",
+      "stock",
+      "trading"
+    ]
+  ],
+  [
+    "The 'AccuDistr' variant of the Accumulate/Distribute Algo is conceptually the same as the pre-existing 'AD' However, it introduces the ability to close existing Trader Workstation sessions while still allowing the algo to continue working.",
+    [
+      "algo",
+      "close"
+    ]
+  ],
+  [
+    "The Adaptive Algo combines IB's Smart routing capabilities with user-defined priority settings. Using the Adaptive algo leads to better execution prices on average than for regular limit or market orders. The 'Priority' selector determines the time taken to scan.",
+    [
+      "algo",
+      "execution",
+      "limit",
+      "market",
+      "orders"
+    ]
+  ],
+  [
+    "The Arrival Price algo is designed to keep hidden orders that will impact a high percentage of the average daily volume (ADV) The order entry screen allows the user to determine when the order will start and end regardless of whether or not the full amount of the order has been filled.",
+    [
+      "algo",
+      "order",
+      "orders",
+      "volume"
+    ]
+  ],
+  [
+    "The Balance Impact Risk balances the market impact of trading the option with the risk of price change. This strategy considers the user-assigned level of risk aversion to define the pace of the execution.",
+    [
+      "execution",
+      "market",
+      "option",
+      "trading"
+    ]
+  ],
+  [
+    "The Close Price algo Strategy breaks down large order amounts and determines the timing of order entry. The start and pace of execution are determined by the user who assigns a level of market risk and specifies the target percentage of volume.",
+    [
+      "algo",
+      "close",
+      "execution",
+      "market",
+      "order"
+    ]
+  ],
+  [
+    "The Dark Ice order type develops the concept of privacy adopted by orders such as Iceberg or Reserve, using a proprietary algorithm. Clients can determine the timeframe an order remains live and have the option to allow trading past end time.",
+    [
+      "option",
+      "order",
+      "orders",
+      "trading"
+    ]
+  ],
+  [
+    "A Midprice order is designed to split the difference between the bid and ask prices, and fill at the current midpoint of the NBBO. Set an optional price cap to define the highest price (for a buy order) or the lowest price ( for a sell order) you are willing to accept. Smart-routing to US stocks only.",
+    [
+      "nbbo",
+      "order",
+      "routing",
+      "smart",
+      "stocks"
+    ]
+  ],
+  [
+    "The Minimise Impact algo minimises market impact by slicing the order over time to achieve a market average without going over the given maximum percentage value. Algo Strategy Value: MinImpact maxPctVol: double. Maximum percentage of ADV Valid Value/ Format: 0.1 (10%) - 0.5 (50%)",
+    [
+      "algo",
+      "market",
+      "order"
+    ]
+  ],
+  [
+    "The Percent of Volume algo can limit the contribution of orders to overall average daily volume in order to minimize impact. Clients can set a value between 1-50% to control their participation between stated start and end times. IB will use best efforts not to take liquidity when this box is checked.",
+    [
+      "algo",
+      "limit",
+      "order",
+      "orders",
+      "volume"
+    ]
+  ],
+  [
+    "This algo allows you to buy more aggressively when the price is low and be more passive as the price increases. The order quantity and volume distribution over the time during which the order is active is determined using the target percent of volume you entered along with continuously updated volume forecasts.",
+    [
+      "algo",
+      "order",
+      "volume"
+    ]
+  ],
+  [
+    "Algo allows you to participate in volume at a user-defined rate that varies over time depending on the remaining size of the order. This allows the order to be more aggressive initially and less aggressive toward the end, or vice versa.",
+    [
+      "algo",
+      "order",
+      "volume"
+    ]
+  ],
+  [
+    "This algo allows you to participate in volume at a user-defined rate that varies with time. Define the target percent rate at the start time and at the end time, and the algo calculates the participation rate over time.",
+    [
+      "algo",
+      "volume"
+    ]
+  ],
+  [
+    "The TWAP algo aims to achieve the time-weighted average price calculated from the time you submit the order to the time it completes. Incomplete orders at the end of the stated completion time will continue to fill if the 'allow trading past end time' is checked.",
+    [
+      "algo",
+      "order",
+      "orders",
+      "trading"
+    ]
+  ],
+  [
+    "VWAP:IB's best-efforts VWAP algo seeks to achieve the Volume-Weighted Average price (VWAP), calculated from the time you submit the order to the close of the market. The user can determine the maximum percentage of average daily volume (up to 50%) his order will comprise.",
+    [
+      "algo",
+      "close",
+      "market",
+      "order",
+      "volume"
+    ]
+  ],
+  [
+    "It is recommended to first try to create the QBAlgo in TWS to see the most current available field values. QBAlgos are only available in live accounts.",
+    [
+      "field",
+      "tws"
+    ]
+  ],
+  [
+    "Bolt:Algo Strategy Value: Bolt StartTime: String. Start Time must be on the same date as Start Time. Duration: double. This value is a number of minutes that the order should be worked. Liquidity Aggressiveness Threshold: 0.",
+    [
+      "algo",
+      "order"
+    ]
+  ],
+  [
+    "No parameters should be attached. Only the strategy needs to be specified as Closer. Closer:Algo Strategy Value:",
+    [
+      "algo"
+    ]
+  ],
+  [
+    "Octane:Algo Strategy Value: Octane StartTime: String. Start Time must be on the same date as Start Time. Takes precedence over Duration.",
+    [
+      "algo"
+    ]
+  ],
+  [
+    "Strobe:Algo Strategy Value: Strobe StartTime: String. StartTime must be on the same date as Start Time. Takes precedence over Duration.",
+    [
+      "algo"
+    ]
+  ],
+  [
+    "This list is built for the sole purpose of technical assistance. The companies on this list are not listed as an endorsement or condemnation of their product. Additional resources can be found in the official IBKR Investors' Marketplace.",
+    [
+      "ibkr"
+    ]
+  ],
+  [
+    "Interactive Brokers strives to regularly update our platforms for extended feature-sets and mitigate bugs. As a result, regular updates of Trader Workstation, IB Gateway, and the API will release as the newest 'Stable' or 'Latest' version. Third Party Platforms may initially integrate with Interactive Brokers using an API version.",
+    [
+      "api",
+      "brokers",
+      "gateway",
+      "interactive"
+    ]
+  ],
+  [
+    "In order to use third-party platforms, you will need to have a funded IBKR PRO account. If you are getting the message that API support is not available, you either have an IBKR Lite account or need to wait until after the daily server reset.",
+    [
+      "account",
+      "api",
+      "ibkr",
+      "order"
+    ]
+  ],
+  [
+    "Not all third party API platforms are compatible with all IBKR account structures. Always check first with the software vendor before opening a specific account type or converting an IB account type.",
+    [
+      "account",
+      "api",
+      "ibkr"
+    ]
+  ],
+  [
+    "All platforms that connect to Trader Workstation must have the initial connection available within TWS first. Interactive Brokers support cannot provide connection instruction for all third party platforms. The third party must provide their own instructions for connecting to Interactive Broker.",
+    [
+      "brokers",
+      "connection",
+      "interactive",
+      "tws"
+    ]
+  ],
+  [
+    " Interactive Brokers cannot provide any kind of support or advice for software not developed by IBKR itself. Depending on the nature of your inquiry, our support staff may be able to review logs in order to confirm if data is being properly sent to the third party platform.",
+    [
+      "brokers",
+      "data",
+      "ibkr",
+      "interactive",
+      "order"
+    ]
+  ],
+  [
+    "There will be occasions when a given operation will not be fulfilled as expected. This is not because of a malfunction in either platform but because of the business logic involved. It is the duty of the third party program to clearly show these error messages.",
+    []
+  ],
+  [
+    "There are precautionary settings in TWS that are designed to be a order safety check. TWS would usually generate a pop-up warning dialogue, or sent back an error message via the API. Some TWS precautions can be bypassed by navigating to File/Edit.",
+    [
+      "api",
+      "order",
+      "tws"
+    ]
+  ],
+  [
+    "In order to retrieve market data off-platform through an API, exchanges require users to subscribe to market data. Specific requirements can be found on the API Market Data Subscription page.",
+    [
+      "api",
+      "data",
+      "market",
+      "order",
+      "subscription"
+    ]
+  ],
+  [
+    "Market data is attached to each username. As such, users must be subscribed on each username, or be sharing market data to the paper account from their live username.",
+    [
+      "account",
+      "data",
+      "market"
+    ]
+  ],
+  [
+    "Q: I am obtaining a message saying 'Historical data request pacing violation' A: It is likely that the third party is requesting more historical market data than is allowed by our Historical Data Limitations.",
+    [
+      "data",
+      "historical",
+      "market",
+      "request"
+    ]
+  ],
+  [
+    "Third Party FAQ 10: My third party program shows 'No data of type EODChart is available' when trying to load a chart.",
+    [
+      "data"
+    ]
+  ],
+  [
+    "Q: I am obtaining a 'HMDS query returned no data' message. A: Sometimes the data prior to the specified requested date is also not available.",
+    [
+      "data"
+    ]
+  ],
+  [
+    " CFDs do not have any market data of their own. When you try to fetch non-Index CFD data from the TWS, you will obtain an error message. Some third party programs' user interface only allow placing orders via their charts.",
+    [
+      "data",
+      "market",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "Connections via the TWS API are not aware of the user name with which you are logged in with in your TWS. From this point of view the API makes no difference between live or paper trading.",
+    [
+      "api",
+      "trading",
+      "tws"
+    ]
+  ],
+  [
+    "You can launch as many instances of the TWS as you need using different user name/password combinations. It is crucial though to make sure each TWS is listening on a different port as described in the Enable API connections section.",
+    [
+      "api",
+      "port",
+      "tws"
+    ]
+  ],
+  [
+    "Some charting platforms circumvent our Historical Data Limitations by combining real time and historical data. A chart displaying data from NYSE will never be the same as another built from ARCA exchange or from our SMART routing strategy. Another common mistake involves having different timezones between the TWS and your client application.",
+    [
+      "client",
+      "data",
+      "exchange",
+      "historical",
+      "routing"
+    ]
+  ],
+  [
+    "Streaming real time data or receiving historical bars from the API requires streaming level 1 market data subscriptions. Subscriptions for instruments other than forex, bonds, and index CFDs incur a monthly fee.",
+    [
+      "api",
+      "bonds",
+      "data",
+      "forex",
+      "historical"
+    ]
+  ],
+  [
+    "It is possible to connect an API application to a trial account. However it is not possible to receive real time market data or historical candlesticks for most instruments from the TWS API.",
+    [
+      "account",
+      "api",
+      "data",
+      "historical",
+      "market"
+    ]
+  ],
+  [
+    "The TWS API is an interface to TWS or IB Gateway. It provides many functionalities, such as the ability to receive market data, place orders, and receive account information. FIX/CTCI connectivity can be configured to connect either with IB Gateway or directly to IB.",
+    [
+      "account",
+      "api",
+      "data",
+      "fix",
+      "gateway"
+    ]
+  ],
+  [
+    "To connect to the same IBKR account simultaneously with multiple trading applications it is necessary to have multiple usernames. Additional usern Names can be created through Account Management free of charge. Market data subscriptions only apply to individual usern names so fees would be charged separately.",
+    [
+      "account",
+      "data",
+      "ibkr",
+      "market",
+      "trading"
+    ]
+  ],
+  [
+    "Most third party API applications do not support all IBKR account structures. consult with the third party software vendor before opening or converting to a specific IB account type.",
+    [
+      "account",
+      "api",
+      "ibkr"
+    ]
+  ],
+  [
+    "If an order appears in TWS as untransmitted and is not sent to IB, there are generally three causes: There is an error in the order preventing transmission There is a TWS precautionary setting preventing transmission to IB.",
+    [
+      "order",
+      "tws"
+    ]
+  ],
+  [
+    "TWS and IB Gateway have the ability to automatically restart daily without user authentication at a chosen time from Monday-Saturday. On Sunday, following the Saturday night server reset, it is necessary for the user to re-authenticate any running session.",
+    [
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    " Interactive Brokers can not offer recommendations or suggestions for third party platforms. Third Party FAQ 23:",
+    [
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "TWS offers the user the ability to directly view positions, trades, and market data. IB Gateway has a simple graphical user interface that is only used for modifying settings.",
+    [
+      "data",
+      "gateway",
+      "market",
+      "tws"
+    ]
+  ],
+  [
+    "Both TWS and IB Gateway are designed to have a user interface for the client to enter their account credentials. For that reason, headless or GUI-less operation is not supported.",
+    [
+      "account",
+      "client",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    " IBKR Professional Services Team or IBKR Brokerage Operation team will handle the initial setup for IBKR/Bloomberg EMSX.",
+    [
+      "ibkr"
+    ]
+  ],
+  [
+    "You can connect your Interactive Brokers account to Bookmap.",
+    [
+      "account",
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "In order to trade on 2 individual accounts at the same time using Capitalise.AI, you will need each Individual account to have its own username and unique email address.",
+    [
+      "account",
+      "order"
+    ]
+  ],
+  [
+    "This is frequently caused by not completing the Collective 2 agreement. Please be sure that the the agreement and a copy of the photo ID are sent to docs@collective2.com.",
+    []
+  ],
+  [
+    "Once the backend team at Interactive Brokers has received the application from DAS Trader, it will generally take 1-2 business days for the linkage request to be addressed. The entire process may take more time depending on how long it takes for the back-end team to receive the application.",
+    [
+      "brokers",
+      "interactive",
+      "request"
+    ]
+  ],
+  [
+    "You can connect your Interactive Brokers account to MetaTrader 5.",
+    [
+      "account",
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "You can connect your Interactive Brokers account to MotiveWave. For adding symbol, please visit: http://www.motivewave.com/knowledge-base.",
+    [
+      "account",
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "There may be an issue with your Multicharts connection status. It may not be in Online mode. Different companies may choose to reference data differently.",
+    [
+      "connection",
+      "data"
+    ]
+  ],
+  [
+    "As of NinjaTrader 8.1.4, the platform does not function with most modern releases of the Trader Workstation due to the use of a legacy implementation of the TWS API software. As a result, the minimum support TWS release and the newest Ninja Trader 8 release are incompatible. Clients intended to use the Ninja trader platform should continue to use their supported IB Gateway 10.23.2a version.",
+    [
+      "api",
+      "function",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "You need to have IB market data subscription for getting IB live data during your live trading.",
+    [
+      "data",
+      "market",
+      "subscription",
+      "trading"
+    ]
+  ],
+  [
+    "Q: Symbol is incorrect  A: Sierra Chart changes the symbol settings for all Interactive Brokers users. For example, the IBM Stock (SMART) in TWS has another symbol format in Sierra Chart: IBM-STK-SMART-USD.",
+    [
+      "brokers",
+      "interactive",
+      "smart",
+      "stock",
+      "tws"
+    ]
+  ],
+  [
+    "TradeStation users may be prompted to upgrade their Trader Workstation version due to an upcoming Interactive Brokers minimum version release. To maintain functionality, please maintain your current version of Trader Work station.",
+    [
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "You can connect your Interactive Brokers account to TradeZella. You can go to IB Client Portal to enable Flex Web Service to generate Token & Query ID. You could execute trades on IBKR and then transfer the data into Trade Zella.",
+    [
+      "account",
+      "brokers",
+      "client",
+      "data",
+      "ibkr"
+    ]
+  ],
+  [
+    "Interactive Brokers and TradingView integration only supports Stocks, Futures, and Leveraged Forex trading. Interactive Brokers does not require users to use IBKR-provided data.",
+    [
+      "brokers",
+      "data",
+      "forex",
+      "futures",
+      "ibkr"
+    ]
+  ],
+  [
+    "The TWS API acts as an interface to retrieve and send data autonomously. Interactive Brokers provides code systems in Python, Java, C++, C#, and VisualBasic.",
+    [
+      "api",
+      "brokers",
+      "data",
+      "interactive",
+      "java"
+    ]
+  ],
+  [
+    " Interactive Brokers does maintain a Python, Java, C#, and C++ offering for the TWS API. C# and our Excel offerings are exclusively available for Windows PC. These features are not available on Linux or Mac OS.",
+    [
+      "api",
+      "brokers",
+      "interactive",
+      "java",
+      "python"
+    ]
+  ],
+  [
+    "A funded and opened IBKR Pro account. The current Stable or Latest release of the TWS or IB Gateway. A working knowledge of the programming language our Testbed sample projects are developed in.",
+    [
+      "account",
+      "gateway",
+      "ibkr",
+      "tws"
+    ]
+  ],
+  [
+    "Our programming interface is designed to automate some of the operations a user normally performs manually. There is no logic within the API other than to ensure the integrity of the exchanged messages. Most validations and checks occur in the backend of TWS and our servers.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "If your regular trading account has been approved and funded, you can use your Account Management page to open a Paper Trading Account. Paper Trading lets you use the full range of trading facilities in a simulated environment.",
+    [
+      "account",
+      "open",
+      "trading"
+    ]
+  ],
+  [
+    "In order to use the TWS API, all customers must install either Trader Workstation or IB Gateway. Both downloads maintain the same level of usage and support.",
+    [
+      "api",
+      "gateway",
+      "order",
+      "tws"
+    ]
+  ],
+  [
+    "It is recommended for API users to use offline TWS because TWS online version has automatic update. Please use same TWS version to make sure the TWS and API versions are synced.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "Some TWS Settings affect API. The settings required to use the TWS API with the Trader Workstation are managed in the Global Configuration. Please: Enable 'ActiveX and Socket Clients'",
+    [
+      "activex",
+      "api",
+      "socket",
+      "tws"
+    ]
+  ],
+  [
+    "For IBHK API users, it is commended to use IB Gateway instead of TWS. It is because all IBHK users cannot choose 'Never Lock Trader Workstation'",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "In TWS/ IB Gateway - 'Global Configuration' - 'General', you can adjust the Memory Allocation (in MB)*. This feature is to control how much memory your computer can assign to the TWS or IB Gateway application. Usually, higher value allows users to have faster data returning speed.",
+    [
+      "allocation",
+      "data",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "Daily & Weekly Reauthentication: In TWS/ IB Gateway - 'Global Configuration' - 'Lock and Exit', you can choose the time of your TWS being shut down. For API users, it is recommended to choose 'Never lock Trader Workstation' and 'Auto restart' The weekly authentication cycle starts on every Monday.",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "In TWS - 'Global Configuration' - 'API' - \"Precautions', you can enable the following items to stop receiving the order submission messages. Enable 'Bypass Order Precautions for API orders'",
+    [
+      "api",
+      "order",
+      "orders",
+      "stop",
+      "tws"
+    ]
+  ],
+  [
+    "All IB paper accounts are connected to US server by default and its location cannot be changed. IB servers in different regions have different scheduled server maintenance time. You may need to change the IB server location in order to avoid service downtime.",
+    [
+      "order"
+    ]
+  ],
+  [
+    "In TWS Global Configuration - Orders - Smart Routing, you can set your SMART order routing algorithm. For available SMART Routing via TWS API, please visit: http://www.interactivebrokers.com/campus/ibkr-api-page/contracts/#smart-routing.",
+    [
+      "api",
+      "ibkr",
+      "order",
+      "orders",
+      "routing"
+    ]
+  ],
+  [
+    "In TWS Global Configuration - Advisor Setup - Presets, you can need to choose Allocation Preference in order to avoid wrong allocation result. Allocation Setup (For Financial Advis",
+    [
+      "advisor",
+      "allocation",
+      "order",
+      "tws"
+    ]
+  ],
+  [
+    "The TWS Setting listed in the Global Configuration under API -> Setting for Maintain and resubmit orders when connection is restored, is enabled by default in TWS 10.28 and above. All orders received while connectivity is lost will be saved and automatically resubmitted when connectivity is restored. If the Trader Workstation is closed during this time, the orders are deleted regardless of the setting.",
+    [
+      "api",
+      "connection",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "The TWS Setting listed in the Global Configuration under API -> Setting for Maintain connection upon receiving incorrectly formatted fields, is enabled by default in TWS 10.28 and above. For clients operating on Client Version 100 and above, users will not disconnect from fields with invalid value submissions.",
+    [
+      "api",
+      "client",
+      "connection",
+      "tws"
+    ]
+  ],
+  [
+    "The TWS API is only available through the interactivebrokers.io MSI or ZIP file. Any other resource, including pip, NuGet, or any other online repository is not hosted, endorsed, supported, or connected to Interactive Brokers. It is important that the API installs to the C: drive.",
+    [
+      "api",
+      "brokers",
+      "interactive",
+      "tws"
+    ]
+  ],
+  [
+    " install TWS API on Windows:Windows: Download the IB API for Windows to your local machine This will direct you to Interactive Brokers API License Agreement, please review it Once you have clicked 'I Agree', refer to the Windows section to download the API Software version of your preference. This will download TWSAPI folder to your computer Go to your IDE and Open Terminal.",
+    [
+      "api",
+      "brokers",
+      "interactive",
+      "open",
+      "tws"
+    ]
+  ],
+  [
+    "Installing the TWS API on MacOs / Linux: Download the IB API for Mac/Unix zip file to your local machine. Unzip the contents the installer into your home folder with the following command.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "'IBSampleApp' is built with Java. Java users can use it to quickly test the IB TWS API functions.",
+    [
+      "api",
+      "java",
+      "tws"
+    ]
+  ],
+  [
+    "Many of our most common features, as well as instructions for installing and running the Trader Workstation API, are available in our TWS API Tutorial Series. The series uses Python to implement the TWSAPI functionality. The function calls are identical across languages, and will follow a similar patter regardless of language.",
+    [
+      "api",
+      "function",
+      "python",
+      "tws"
+    ]
+  ],
+  [
+    "Third party software vendors make use of the TWS' programming interface (API) to integrate their platforms with Interactive Broker's. It is important to keep in mind that most third party API platforms are not compatible with all IBKR account structures.",
+    [
+      "account",
+      "api",
+      "ibkr",
+      "interactive",
+      "tws"
+    ]
+  ],
+  [
+    "While all of the available Trader Workstation API default samples provide equivalent functionality, some languages have unique configurations that must be implemented in order to use our samples.",
+    [
+      "api",
+      "order"
+    ]
+  ],
+  [
+    "Due to the malleability of the many Linux distributions including MacOS, Interactive Brokers is unable to provide a pre-built binary for the library. As such, users programming in C++ on a Linux machine must manually build the Intel Decimal Floating-Point Math Library.",
+    [
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "In order to utilize Python code with the TWS API, you must run our setup file in order to import the code. In order to update the Python IDE, these steps MUST be performed through Command Prompt or Terminal.",
+    [
+      "api",
+      "order",
+      "python",
+      "tws"
+    ]
+  ],
+  [
+    "Our VB.NET code is provided for demonstration purposes only; there is no pure, standalone VB-based TWS API library. Both our 'VB_API_Sample' and the VB 'Testbed' projects included with our TWS. API releases call the C# TWSAPI source. The provided code only interfaces with C# source.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "Before using IB Gateway with the API, it is recommended to first become familiar with TWS. Make use of the sample API applications. Upgrade TWS or IB Gateway periodically.",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "Log files are used by developers and support to unambiguously understand the behavior of a request. These files are stored on the clients machine and are only sent to Interactive Brokers by client request.",
+    [
+      "brokers",
+      "client",
+      "interactive",
+      "request"
+    ]
+  ],
+  [
+    "TWS and IB Gateway can be configured to create a separate log file which has a record of just communications with API applications. This log is not enabled by default; but needs to be enabled by the Global Configuration setting 'Create API Message Log File' Since only API messages are recorded, the API logs are more compact and easier to handle.",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    " Debug=1 allows you to enter conIds into a watchlist to resolve them into symbols. If the instrument is already present in the watchlist, nothing will happen. Changing the behavior of TWS to bring up that Description window on double-click can make it easier to find.",
+    [
+      "tws"
+    ]
+  ],
+  [
+    "Logs are stored in the TWS settings directory, C:\\Jts\\ and then your user subdirectory by default on a Windows computer. The path to the log file directory can be found from a TWS or IB Gateway session by using the combination Ctrl-Alt-U.",
+    [
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "Your logs may be too large to export or upload for Client Services to review. In scenarios such as this, the Support team may request that you delete your existing API logs. To delete your logs: Locate your Logs. Exit TWS or IB Gateway session by clicking 'File' and 'Exit'",
+    [
+      "api",
+      "client",
+      "gateway",
+      "request",
+      "tws"
+    ]
+  ],
+  [
+    " API logging has been enabled with the setting 'Create API Message Log' During the time when an issue occurs, it can be uploaded to the API group. The process of uploading logs does not notify support, nor is a ticket logged. You will need to contact our representatives through a direct call, chat, or secure message center message for our representatives to be aware of the upload.",
+    [
+      "api"
+    ]
+  ],
+  [
+    "In TWS, navigate to Help menu >> Diagnostics >> 'API Logs' or 'TWS Logs'. In IBG, both 'APIlogs' and 'Gateway Logs', are accessible directly from the File menu. Click 'Export Today Logs...' to decrypt the logs and save them in plaintext (logs are stored encrypted on your local machine)",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "Each supported API language of the API contains a message file that translates a given number identifier into their corresponding request. The message identifier numbers used in the underlying wire protocol is the core of the TWS API. The information on the right documents where each message reader file is located.",
+    [
+      "api",
+      "protocol",
+      "request",
+      "tws"
+    ]
+  ],
+  [
+    "Unset values are used throughout programming systems to indicate that a value is not available. An unset value is the maximum value of a given data type. The Unset Double value will appear like 1.7976931348623157E308.",
+    [
+      "data"
+    ]
+  ],
+  [
+    "The TWS API is a BSD implementation that communicates request and response values across TCP socket using a end-line-delimited message protocol. The EReader class will retrieve the messages from the socket connection and decode them for distribution by the EWrapper class.",
+    [
+      "api",
+      "class",
+      "connection",
+      "protocol",
+      "request"
+    ]
+  ],
+  [
+    "IBKR Trader Workstation (TWS) lets traders, investors, and institutions trade stocks, options, futures, forex, bonds, and funds on over 100 markets worldwide from a single account.",
+    [
+      "account",
+      "bonds",
+      "forex",
+      "funds",
+      "futures"
+    ]
+  ],
+  [
+    "IBKR also offers IB Gateway (IBGW) Both represent a server to which an API client application can open a socket connection after the user has authenticated. For security reasons, a headless session of TWS or IBGW without a GUI is not supported.",
+    [
+      "api",
+      "client",
+      "connection",
+      "gateway",
+      "ibgw"
+    ]
+  ],
+  [
+    "Pacing Limitations with regards to the TWS API are based on the number of requests submitted by a client connection. The maximum number of API requests that can be submitted are equivalent to your Maximum Market Data Lines divided by 2, per second.",
+    [
+      "api",
+      "client",
+      "connection",
+      "data",
+      "market"
+    ]
+  ],
+  [
+    "The TWS API supports two formats for users who break the pacing limitations. This behavior is set in the Global Configuration of Trader Workstation or IB Gateway. If the setting is unchecked, TWS will automatically pace the requests submitted by the user.",
+    [
+      "api",
+      "gateway",
+      "tws"
+    ]
+  ],
+  [
+    "A socket connection between the API client application and TWS is established with the IBApi.EClientSocket.eConnect function. Each TWS session can receive up to 32 different client applications simultaneously.",
+    [
+      "api",
+      "client",
+      "connection",
+      "function",
+      "socket"
+    ]
+  ],
+  [
+    " eConnect starts by requesting from the operating system that a TCP socket be opened to the specified IP address and socket port. After the socket has been opened, there must be an initial handshake in which information is exchanged about the supported version of the TWS and API. For this reason it is important that the main EReader object is not created until after a connection has been established.",
+    [
+      "api",
+      "connection",
+      "ip",
+      "object",
+      "port"
+    ]
+  ],
+  [
+    " eConnect starts by requesting from the operating system that a TCP socket be opened to the specified IP address and socket port. If the socket cannot be opened, the system returns an error which is received by the API client as error code 502. After the socket has been opened, there must be an initial handshake in which information is exchanged about the supported version of the TWS and API to ensure each platform can interpret received messages.",
+    [
+      "api",
+      "client",
+      "ip",
+      "port",
+      "socket"
+    ]
+  ],
+  [
+    "API programs always have at least two threads of execution. One thread is used for sending messages to TWS, and another thread for reading returned messages. The second thread uses the API EReader class to read from the socket and add messages to a queue. The two-threaded design is used in the IB Python sample Program.py and the C++ sample TestCppClient.",
+    [
+      "api",
+      "class",
+      "execution",
+      "python",
+      "socket"
+    ]
+  ],
+  [
+    "For C#, Java, C++, and Visual Basic, we instead maintain a triple thread structure which requires the creation of a reader thread, a queue thread, and then a wrapper thread. In the (C++, C#/.NET, Java) APIs, this is done via the IBApi.EReaderSignal object.",
+    [
+      "basic",
+      "java",
+      "object",
+      "thread",
+      "visual"
+    ]
+  ],
+  [
+    "The EReader logic is handled in the EClient.connect so the EReader thread is automatically started upon connection. User is required to trigger Client::run() below, where the message queue is processed in an infinite loop.",
+    [
+      "client",
+      "connection",
+      "thread"
+    ]
+  ],
+  [
+    "If you want to connect TWS/ IB Gateway from a remote server, uncheck the 'Allow connection from localhost only' setting. 'Trusted IPs' does not accept subnet (e.g. /27, /28). It only accepts single IP Addresses.",
+    [
+      "connection",
+      "gateway",
+      "ip",
+      "localhost",
+      "tws"
+    ]
+  ],
+  [
+    "By default, the TWS API is not configured to automatically accept connection requests from API applications. Untrusted IPs attempting to make a connection will be denied without prompting. It is possible to configure the API to accept connections from trusted IPs.",
+    [
+      "api",
+      "connection",
+      "tws"
+    ]
+  ],
+  [
+    "It is not possible to login to multiple trading applications simultaneously with the same username. However, it is possible to create additional usernames for an account that can be used in different trading applications.",
+    [
+      "account",
+      "trading"
+    ]
+  ],
+  [
+    "If there is a problem with the socket connection between TWS and the API client, for instance if TWS suddenly closes, this will trigger an exception in the EReader thread. This exception will also occur if an API client attempts to connect with a client ID that is already in use. The socket EOF is handled slightly differently in different API languages.",
+    [
+      "api",
+      "client",
+      "connection",
+      "socket",
+      "thread"
+    ]
+  ],
+  [
+    "The TWS offers a comprehensive overview of your account and portfolio through its Account and Portfolio windows. This information can be obtained via the TWS API through three different kind of requests.",
+    [
+      "account",
+      "api",
+      "portfolio",
+      "tws"
+    ]
+  ],
+  [
+    "The update frequency of 3 minutes is the same as the TWS Account Window and cannot be changed. The initial invocation of reqAccountSummary will result in a list of all requested values being returned.",
+    [
+      "account",
+      "tws"
+    ]
+  ],
+  [
+    "Customers can specify the data received by using a specific tags value. Many languages offer the import of AccountSummaryTags with a method to retrieve all tag values.",
+    [
+      "data",
+      "method"
+    ]
+  ],
+  [
+    "AccountType Identifies the IB account structure NetLiquidation The basis for determining the price of the assets in your account. BuyingPower Buying power serves as a measurement of the dollar value of securities that one may purchase in a securities account without depositing additional funds. PreviousEquityWithLoanValue Marginable Equity with Loan value as of 16:00 ET the previous day.",
+    [
+      "account",
+      "funds"
+    ]
+  ],
+  [
+    "EWrapper.accountSummary receives the account information just as it appears in the TWS' Account Summary Window. Requires TWS 967+ to receive accountSummaryEnd in linked account structures.",
+    [
+      "account",
+      "tws"
+    ]
+  ],
+  [
+    "Once the subscription to account summary is no longer needed, it can be cancelled via the IBApi::EClient::cancelAccountSummary method.",
+    [
+      "account",
+      "method",
+      "subscription"
+    ]
+  ],
+  [
+    "Unrealized and Realized P&L is sent to the API function IBApi.EWrapper.updateAccountValue. This information is the exact same as the one displayed within the TWS' Account Window. Unless there is a position change this information is updated at a fixed interval of three minutes.",
+    [
+      "account",
+      "api",
+      "function",
+      "tws"
+    ]
+  ],
+  [
+    "Subscribes to a specific account's information and portfolio. Only one account can be subscribed at a time. A second subscription request for another account when the previous one is still active will cause the first one to be canceled.",
+    [
+      "account",
+      "portfolio",
+      "request",
+      "subscription"
+    ]
+  ],
+  [
+    "Only one account can be subscribed at a time. This occurs at the time of a position change, or every 3 minutes at most. This frequency cannot be adjusted.",
+    [
+      "account"
+    ]
+  ],
+  [
+    "When requesting reqAccountUpdates customers will receive values corresponding to various account key/value pairs. The table below documents potential responses and what they mean. Account values delivered via IBApi.updateAccountValue can be classified in the following way: Commodities, Securities and Totals.",
+    [
+      "account",
+      "commodities"
+    ]
+  ],
+  [
+    "Only one account at a time can be subscribed to at one time. Attempting a second subscription without previously cancelling an active one will not yield any error message. With Financial Advisory (FA) account structures there is an alternative way of specifying the account code.",
+    [
+      "account",
+      "subscription"
+    ]
+  ],
+  [
+    "The IBApi.EClient.reqAccountUpdatesMulti can be used in any account structure to create simultaneous account value subscriptions from one or multiple accounts and/or models. The data returned will match that displayed within the TWS Account Window. A profile name can be accepted in place of group in the account parameter for Financial Advisors.",
+    [
+      "account",
+      "data",
+      "parameter",
+      "tws"
+    ]
+  ],
+  [
+    "It is possible to determine from the API whether an account exists under an account family, and find the family code. For instance, if individual account U112233 is under a financial advisor with account number F445566, if the function reqFamilyCodes is invoked for the user of account U 112233, the familycode 'F4455 66A' will be returned.",
+    [
+      "account",
+      "advisor",
+      "api",
+      "family",
+      "function"
+    ]
+  ],
+  [
+    "A single user name can handle more than one account. The TWS will automatically send a list of managed accounts once the connection is established. The list can also be fetched via the IBApi.reqManagedAccts method.",
+    [
+      "account",
+      "connection",
+      "method",
+      "tws"
+    ]
+  ],
+  [
+    "The function IBApi.EClient.reqPositions can only be used with a single account at a time. The function is not available in Introducing Broker or Financial Advisor master accounts that have very large numbers of subaccounts.",
+    [
+      "account",
+      "advisor",
+      "function"
+    ]
+  ],
+  [
+    "The function IBApi.EClient.reqPositionsMulti can be used with any account structure to subscribe to positions updates for multiple accounts and/or models. The account and model parameters are optional if there are not multiple accounts or models available.",
+    [
+      "account",
+      "function",
+      "model"
+    ]
+  ],
+  [
+    "Financial Advisors can request P&L figures for 'All' subaccounts, or for a portfolio model. This is further extended to include realized PnL information at the account or individual position level. Currently updates are returned to IBApi.EWrapper.pnlSingle approximately once per second.",
+    [
+      "account",
+      "model",
+      "pnl",
+      "portfolio",
+      "request"
+    ]
+  ],
+  [
+    "This function will return White Branding ID associated with the user. Please note, that nothing will be returned if requesting username is not associated with any White Branded entity.",
+    [
+      "branding",
+      "function",
+      "white"
+    ]
+  ],
+  [
+    "IB sends out important News Bulletins, which can be accessed via the TWS API. Bulletins are delivered via IBApi.EWrapper.updateNewsBulletin whenever there is a new bulletin. In order to stop receiving bulletins you need to cancel the subscription.",
+    [
+      "api",
+      "order",
+      "stop",
+      "subscription",
+      "tws"
+    ]
+  ],
+  [
+    "An IBApi.Contract object represents trading instruments such as a stocks, futures or options. Every time a new request that requires a contract is sent to TWS, the platform will try to match the provided contract object with a single candidate.",
+    [
+      "contract",
+      "futures",
+      "object",
+      "options",
+      "request"
+    ]
+  ],
+  [
+    "The Contract object is an object used throughout the TWS API to define the target of your requests. Contract objects will be used for market data, portfolios, orders, executions, and even some news request. In all contracts, the minimum viable structure requires at least a conId and exchange; or a symbol, secType, exchange, primaryExchange, and currency.",
+    [
+      "api",
+      "contract",
+      "currency",
+      "data",
+      "exchange"
+    ]
+  ],
+  [
+    "If there is more than one contract matching the same description, TWS will return an error notifying you there is an ambiguity. In these cases the TWS needs further information to narrow down the list of contracts matching the provided description. The best way of finding a contract's description is within TWS itself.",
+    [
+      "contract",
+      "tws"
+    ]
+  ],
+  [
+    "IBApi.EClient.reqContractDetails. This includes information about a contract's conID, symbol, local symbol, currency, etc. It can also take a Contract object which matches multiple contracts in IB's database. Request for Bond details will be returned to IBApi::EWrapper::bondContractDetails instead.",
+    [
+      "bond",
+      "contract",
+      "currency",
+      "object",
+      "request"
+    ]
+  ],
+  [
+    "The option chain for a given security can be returned using the function EClient.reqContractDetails. If an option contract is incompletely defined, a list of all matching option contracts will be returned. One limitation of this technique is that the return of option chains will be throttled and take a longer time the more ambiguous the contract definition.",
+    [
+      "contract",
+      "function",
+      "option"
+    ]
+  ],
+  [
+    "The function IBApi::EClient::reqMatchingSymbols is available to search for stock contracts. The input can be either the first few letters of the ticker symbol, or a character sequence matching a word in the security name.",
+    [
+      "function",
+      "stock"
+    ]
+  ],
+  [
+    "Forecast and Event Contracts enable investors to trade their opinion on specific yes-or-no questions on economic indicators. Forecast Contracts let you trade your view on the outcomes of various economic, government and environmental indicators, elections and tight races. Event Contracts can generally be thought of as options products in the TWS API, and their discovery workflow follows a familiar options-like sequence.",
+    [
+      "api",
+      "options",
+      "tws"
+    ]
+  ],
+  [
+    "IB's Event Contract instrument records use the following fields inherited from the options model: An underlier, which may or may not be artificial: For CME products, a tradable Event Contract will have the relevant CME future as its underlier. The security type of the CME contract will be a futures option, or 'FOP'",
+    [
+      "contract",
+      "futures",
+      "model",
+      "option",
+      "options"
+    ]
+  ],
+  [
+    "We can establish a working example against the Global Carbon Dioxide Emissions contract on the ForecastTrader Website. All ForecastEx contracts use the 'OPT' security type, as mentioned in the Contract Definition & Discovery section. All currently offered Event Contracts are hosted in the United States of America, and therefore will always use 'USD' as their currency value.",
+    [
+      "contract",
+      "currency"
+    ]
+  ],
+  [
+    "ForecastEx instruments do not support buying and selling. 'BID' and 'ASK' values will not correlate to buy and sell values. Historical 'Trades' nor real-time 'Last' prices will not be available.",
+    [
+      "historical"
+    ]
+  ],
+  [
+    "Event Contracts function the same as any other instrument offered at Interactive Brokers. CME Group instruments can be bought and sold and function as normal futures options. ForecastEx instruments cannot be sold, only bought.",
+    [
+      "brokers",
+      "function",
+      "futures",
+      "interactive",
+      "options"
+    ]
+  ],
+  [
+    "Event Contracts behave like Options or Futures Options. Market Scanners are not currently available to research Event Contracts. Users will need to discover Event Contract symbols through Interactive Brokers' ForecastTrader.",
+    [
+      "brokers",
+      "contract",
+      "futures",
+      "interactive",
+      "market"
+    ]
+  ],
+  [
+    "When a client application sends a message to TWS which requires a response which has an expected response (i.e. placing an order, requesting market data, subscribing to account updates, etc.), TWS will almost either always 1) respond with the relevant data or 2) send an error message. The TWS uses the EWrapper.error method not only to deliver errors but also warnings or informative messages. All messages delivered by the TWS are usually accompanied by a brief but meaningful description pointing in the direction of the problem.",
+    [
+      "account",
+      "client",
+      "data",
+      "market",
+      "method"
+    ]
+  ],
+  [
+    "EWrapper.error is a way to send an error message to a server. It is only available for TWS API 10.33+ and up.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "The content below references some of the most common errors received by clients at Interactive Brokers. If further information is required, please feel to contact Customer Service.",
+    [
+      "brokers",
+      "interactive"
+    ]
+  ],
+  [
+    "Financial Advisors are able to manage their allocation groups from the TWS API. A number of methods for account allocations are available with Financial Advisor and IBroker account structures. Allocation Groups can be created or modified in the Trader Workstation.",
+    [
+      "account",
+      "advisor",
+      "allocation",
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "Allocation methods for financial advisor's allocation groups are created using an XML format. Allocation Method XML Format: http://www.interactivebrokers.com/campus/ibkr-api-page/.",
+    [
+      "advisor",
+      "allocation",
+      "api",
+      "ibkr",
+      "method"
+    ]
+  ],
+  [
+    "Advisors can use Model Portfolios to easily invest some or all of a client's assets into one or multiple custom-created portfolios. The TWS API can access model portfolios in accounts where this functionality is available.",
+    [
+      "api",
+      "client",
+      "model",
+      "tws"
+    ]
+  ],
+  [
+    "With TWS/IBGW build 983+, the API settings will have a new flag/checkbox, 'Use Account Groups with Allocation Methods' If not enabled, groups and profiles would behave the same as before. If it is checked, group and profile functionality will be merged.",
+    [
+      "account",
+      "allocation",
+      "api",
+      "ibgw",
+      "tws"
+    ]
+  ],
+  [
+    "For advisors to place orders to their allocation groups users would simply declare their allocation group name in the order object. The example to the right references a standard market order placed to our allocation group, MyTestProfile.",
+    [
+      "allocation",
+      "market",
+      "object",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "The API can request Live, Frozen, Delayed and Delayed Frozen market data from Trader Workstation by switching market data type. Live market data is streaming data relayed back in real time. Frozen data is the last data recorded at market close. Delayed data is 15 - 20 minutes delayed.",
+    [
+      "api",
+      "close",
+      "data",
+      "market",
+      "request"
+    ]
+  ],
+  [
+    "TWS sends marketDataType callback (1 or 2) indicating what market data will be sent after this callback. It can be regular or frozen. Interactive Brokers data will always try to provide the most up to date market data possible.",
+    [
+      "brokers",
+      "data",
+      "interactive",
+      "market",
+      "tws"
+    ]
+  ],
+  [
+    "Historical Market data is available for Interactive Brokers market data subscribers. This includes requests for historical bars, identical to the Trader Workstation, historical Time & Sales, as well as Histogram data.",
+    [
+      "brokers",
+      "data",
+      "historical",
+      "interactive",
+      "market"
+    ]
+  ],
+  [
+    "Historical data at IB is filtered for trade types which occur away from the NBBO such as combo legs, block trades, and derivative trades. Volume data returned for historical bars can be modified to return in shares or lots. If the setting is checked, historical volume data will return as a Round Lot.",
+    [
+      "data",
+      "historical",
+      "nbbo",
+      "volume"
+    ]
+  ],
+  [
+    "Use EClient.reqHeadTimestamp to find the first available point of data for a given whatToShow value. ReqHeadTimeStamp counts as an ongoing historical data request, similar to using E client's keepUpToDate=True flag.",
+    [
+      "client",
+      "data",
+      "historical",
+      "request"
+    ]
+  ],
+  [
+    "Historical Bars provide candlestick values, including open, high, low, and close, based on specified duration and size. Additional volume data depends on the whatToShow value selected. The EClient.reqHistoricalData method requires a unique request identifier, contract details, end date and time formatted as 'YYYYMMDD HH:mm:ss TMZ', and duration as a Valid Duration String to specify the time to go back. The barSizeSetting determines data granularity, while whatToShow selects the data type to retrieve, including options like Trades, Midpoint, Bid, or Ask. The useRTH parameter determines if only regular trading hours data is included. The formatDate boolean dictates the date presentation format, which only allows yyyyMMdd for day bars. The keepUpToDate option allows subscription for updates on real-time bars; if set to true, the endDateTime cannot be specified. Historical data is returned through EWrapper.historicalData, containing the OHLC bar data with bars displayed in the TWS login screen's selected timezone. The EWrapper.historicalSchedule method provides additional schedule information when whatToShow is set to 'schedule', including the historical session data range and its timezone. The EWrapper.historicalDataUpdate allows for real-time updates if keepUpToDate is true, merging historical and real-time data to ensure charts are current. Finally, EWrapper.historicalDataEnd signals the completion of receiving historical bars, giving the starting and ending times of the data received. In summary, historical bars offer detailed pricing information through a structured request process, handling real-time updates, scheduling, and data granularity, all while accounting for timezone and trading session preferences. This functionality is essential for traders seeking precise data for analysis and decision-making.",
+    [
+      "bar",
+      "close",
+      "contract",
+      "data",
+      "field"
+    ]
+  ],
+  [
+    "The Interactive Brokers Historical Market Data maintains a duration parameter which specifies the overall length of time that data can be collected. The duration specified will derive the bars of data that can then be Collected.",
+    [
+      "brokers",
+      "data",
+      "historical",
+      "interactive",
+      "market"
+    ]
+  ],
+  [
+    "Bar sizes dictate the data returned by historical bar requests. The bar size will dictate the scale over which the OHLC/V is returned to the API.",
+    [
+      "api",
+      "bar",
+      "data",
+      "historical",
+      "ohlc"
+    ]
+  ],
+  [
+    "The functionality of market data requests is predicated on preset step sizes. Not all bar sizes will work with all duration values. Table listed here will discuss the smallest to largest bar size value for each duration string.",
+    [
+      "bar",
+      "data",
+      "market"
+    ]
+  ],
+  [
+    "The table below displays the maximum duration values allowed for a given bar. The maximum duration for Seconds values for 5 seconds bars are 86400 S. This means that if I want to retrieve more than 1 day's worth of 5 second bars, I will then need to request data in increments of D (days)",
+    [
+      "bar",
+      "data",
+      "request"
+    ]
+  ],
+  [
+    "Interactive Brokers will return historical market data based on the format set from the request. The formatDate parameter can be provided an integer value to indicate how data should be returned. Day bars will only return dates in the yyyyMMdd format.",
+    [
+      "brokers",
+      "data",
+      "historical",
+      "interactive",
+      "market"
+    ]
+  ],
+  [
+    "When using keepUpToDate=True for historical data requests, you will see several bars returned with the same timestamp. This is because data is updated approximately every 1-2 seconds. These updates compound until the end of the specified bar size.",
+    [
+      "bar",
+      "close",
+      "data",
+      "historical",
+      "open"
+    ]
+  ],
+  [
+    "The historical bar types listed below can be used as the whatToShow value for historical bars. These values are used to request different data such as Trades, Midpoint, Bid_Ask data and more. Some bar types support more products than others.",
+    [
+      "bar",
+      "data",
+      "historical",
+      "request"
+    ]
+  ],
+  [
+    "Histograms return data as a function of price level with function IBApi::EClient::reqHistogramData. An active histogram request which has not returned data can be cancelled with EClient.cancelHistogram data.",
+    [
+      "data",
+      "function",
+      "request"
+    ]
+  ],
+  [
+    "Historical Time & Sales will return the same data as what is available in Trader Workstation under the Time and Sales window. This is a series of ticks indicating each trade based on the requested values. Data will not be returned from multiple trading sessions in a single request.",
+    [
+      "data",
+      "historical",
+      "request",
+      "trading"
+    ]
+  ],
+  [
+    " operator timezone refers to the local timezone you have set in the Trader Workstation or IB Gateway instrument. Exchange Time Zone is the value the exchange itself uses to calculate time. UTC format: refers to a standardized return using UTC as the timezone.",
+    [
+      "exchange",
+      "gateway"
+    ]
+  ],
+  [
+    "Live market data and historical bars are currently not available from the API for the exchange OSE. Only 15 minute delayed streaming data will be available for this exchange. The bid, ask, and last size quotes are displayed in shares instead of lots.",
+    [
+      "api",
+      "data",
+      "exchange",
+      "historical",
+      "market"
+    ]
+  ],
+  [
+    "Real time and historical data functionality is combined through the EClient.reqRealTimeBars request. Requests real time bars with a bar size of 5 seconds. Only 5 seconds bars are provided.",
+    [
+      "bar",
+      "data",
+      "historical",
+      "request"
+    ]
+  ],
+  [
+    "A single data request from the API can receive aggregate quotes from multiple exchanges. Different IB contracts have a different exchange map containing the set of exchanges on which they trade. Each exchange map has a different code, such as 'a6' or 'a9'",
+    [
+      "api",
+      "data",
+      "exchange",
+      "request"
+    ]
+  ],
+  [
+    "To check which exchanges offer deep book data, the function EClient.reqMktDepthExchanges can be invoked. It will return a list of exchanges from where market depth is available if the user has the appropriate market data subscription.",
+    [
+      "data",
+      "function",
+      "market",
+      "subscription"
+    ]
+  ],
+  [
+    "Market depth data, also known as level II, represents an instrument's order book. Via the TWS API it is possible to obtain this information with the EClient.reqMarketDepth function. Unlike Top Market Data (Level I), market depth data is sent without sampling or filtering.",
+    [
+      "api",
+      "data",
+      "function",
+      "market",
+      "order"
+    ]
+  ],
+  [
+    "The option greek values- delta, gamma, theta, vega- are returned by default following a reqMktData() request for the option. Greeks are requested automatically when pulling market data for an Options contract. Users that do not have a valid Market Data Subscription for the underlying contract will receive an error that Market Data Is Not Subscribed.",
+    [
+      "contract",
+      "data",
+      "market",
+      "option",
+      "options"
+    ]
+  ],
+  [
+    "Streaming market data values corresponding to data shown in TWS watchlists is available via the EClient.reqMktData. This data is not tick-by-tick but consists of aggregate snapshots taken several times per second. Using the TWS API, you can request real time market data for trading and analysis.",
+    [
+      "api",
+      "data",
+      "market",
+      "request",
+      "tick"
+    ]
+  ],
+  [
+    "Watchlist market data at Interactive Brokers is derived from time-based snapshot intervals which vary by product and region. A given tick will only update as frequently as its interval allows.",
+    [
+      "brokers",
+      "data",
+      "interactive",
+      "market",
+      "snapshot"
+    ]
+  ],
+  [
+    "The most common tick types are delivered automatically after a successful market data request. There are however other tick types available by explicit request: the generic tick types. See the Available Tick Types section for more information on generic ticks.",
+    [
+      "data",
+      "market",
+      "request",
+      "tick"
+    ]
+  ],
+  [
+    "With an exchange market data subscription, it is possible to request a snapshot of the current state of the market once. By invoking the EClient.reqMktData function passing in true for the snapshot parameter, the client application will receive the currently available market data once before a EWrapper.tickSnapshotEnd event is sent 11 seconds later.",
+    [
+      "client",
+      "data",
+      "exchange",
+      "function",
+      "market"
+    ]
+  ],
+  [
+    "The fifth argument to reqMktData specifies a regulatory snapshot request to US stocks and options. For stocks, there are individual exchange-specific market data subscriptions necessary to receive streaming quotes.",
+    [
+      "data",
+      "exchange",
+      "market",
+      "options",
+      "request"
+    ]
+  ],
+  [
+    "A market data request is able to return data from multiple exchanges. The exchange mapping identifier bboExchange will be a symbol such as 'a6' The minTick returned to tickReqParams indicates the minimum increment in market data values.",
+    [
+      "data",
+      "exchange",
+      "market",
+      "request"
+    ]
+  ],
+  [
+    "IB does not provide market data for certain types of instruments, such as stock CFDs and forex CFDs. If a stock CFD or forexCFD is entered into a TWS watchlist, TWS will automatically display market data.",
+    [
+      "data",
+      "forex",
+      "market",
+      "stock",
+      "tws"
+    ]
+  ],
+  [
+    "EClient.reqMktData will return data to various methods. The values returned are dependent upon the generic tick requested. The table below references which tick ID will be returned upon requesting a given generic tick.",
+    [
+      "data",
+      "tick"
+    ]
+  ],
+  [
+    "The Halted tick type indicates if a contract has been halted for trading. It can have the following values:   Value Description -1 Halted status not available. Usually returned with frozen data. 0 Not halted. This value will only be returned if the contract is in a TWS watchlist. 1 General halt. Trading halt is imposed for purely regulatory reasons.",
+    [
+      "contract",
+      "data",
+      "tick",
+      "trading",
+      "tws"
+    ]
+  ],
+  [
+    "Shortable tick is an indicative on the amount of shares which can be sold short for the contract. Receiving the actual number of shares available to short requires TWS 974+. For detailed information about shortability data (shortable shares, fee rate) available outside of TWS, IB also provides an FTP site.",
+    [
+      "contract",
+      "data",
+      "tick",
+      "tws"
+    ]
+  ],
+  [
+    " API reports the current day's volume in several ways. Volume tick type 8: The 'native volume' This includes delayed transactions, busted trades, and combos. RTVolume: highest number, includes non-reportable trades such as odd lots, average price and derivative trades. RTTradeVolume: only includes 'last' ticks, similar to number also used in charts.",
+    [
+      "api",
+      "tick",
+      "volume"
+    ]
+  ],
+  [
+    "The RT Volume tick type corresponds to the TWS' Time & Sales window. It contains the last trade's price, size and time along with current day's total traded volume, Volume Weighted Average Price and whether or not the trade was filled by a single market maker.",
+    [
+      "market",
+      "tick",
+      "tws",
+      "volume"
+    ]
+  ],
+  [
+    "This tick type provides four different comma-separated elements. The sum of dividends for the past 12 months (0.83 in the example below) The sum for the next 12 months. The next dividend date (20130219) The next single dividend amount ( 0.23)",
+    [
+      "tick"
+    ]
+  ],
+  [
+    "In TWS, tick-by-tick data is available in the Time & Sales Window. The maximum number of simultaneous tick- by-tick subscriptions allowed for a user is 5% of the user's total market data lines. See Specialized Market Data Lines for more information. No more than 1 tick- By Tick request can be made for the same instrument within 15 seconds.",
+    [
+      "data",
+      "market",
+      "request",
+      "tick",
+      "tws"
+    ]
+  ],
+  [
+    "Some scans in the TWS Advanced Market Scanner can be accessed via the API. Results are delivered via EWrapper.scannerData. There are no market data fields (bid, ask, last, volume, ...) returned from the scanner.",
+    [
+      "api",
+      "data",
+      "market",
+      "tws",
+      "volume"
+    ]
+  ],
+  [
+    "A string containing all available XML-formatted parameters will then be returned via EWrapper.scannerParameters. Market Scanner parameters:",
+    [
+      "market",
+      "xml"
+    ]
+  ],
+  [
+    "All values used for the ScannerSubscription object are pulled from EClient.scannerParams response. The XML tree will relay a tree containing a corresponding code to each Scanner Subscription field as documented below.",
+    [
+      "field",
+      "object",
+      "response",
+      "subscription",
+      "xml"
+    ]
+  ],
+  [
+    "News:API news requires news subscriptions that are specific to the API. There are three API news services enabled in accounts by default and available from the API: Briefing.com, Benzinga Pro, Fly on the Wall. Four additional news services are available with all TWS versions.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    " API news subscriptions can be added or removed using Account Management. A list of available subscribed news sources is returned to the function IBApi::EWrapper::newsProviders.",
+    [
+      "account",
+      "api",
+      "function"
+    ]
+  ],
+  [
+    "Briefing.com offers Briefing Trader subscribers access to the subscription live head lines via the API. News articles provided through the API may not correspond to what is available directly through the Trader Workstation. Off-platform distribution of data is at the discretion of the news source provider, not by Interactive Brokers.",
+    [
+      "api",
+      "brokers",
+      "data",
+      "interactive",
+      "subscription"
+    ]
+  ],
+  [
+    "With the appropriate API news subscription, historical news headlines can be requested from the API. The resulting headlines are returned to EWrapper::historicalNews.",
+    [
+      "api",
+      "historical",
+      "subscription"
+    ]
+  ],
+  [
+    "The body of a news article can be requested with the article ID returned by invoking the function IBApi::EClient::reqNewsArticle. The body of the news article is returned to the function.",
+    [
+      "function"
+    ]
+  ],
+  [
+    "The next valid identifier is persistent between TWS sessions. It is necessary to use an order ID with new orders which is greater than all previous order IDs used to place an order. More than one market data request cannot use the same request ID.",
+    [
+      "data",
+      "market",
+      "order",
+      "orders",
+      "request"
+    ]
+  ],
+  [
+    "Each TWS API connection maintains its own ClientID to the host through the EClient.connect function. There are two unique client ID behaviors developers must be aware of: Master ClientID and ClientID 0.",
+    [
+      "api",
+      "client",
+      "clientid",
+      "connection",
+      "function"
+    ]
+  ],
+  [
+    "When an order is filled either fully or partially, the. IBApi.EWrapper.commissionReport events will deliver IBA.pi.Execution and IBAPI.CommissionAndFeesReport objects. This allows to obtain the full picture of the order's execution and the resulting commissions. Advisors executing allocation orders will receive execution details and commissions for the allocation order itself.",
+    [
+      "allocation",
+      "execution",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "Executions can be requested on demand via the IBApi.EClient.reqExecutions method. By default, only those executions occurring since midnight for that particular account will be delivered. If you want to request executions from the last 7 days, TWS's Trade Log setting must be adjusted to your requirement.",
+    [
+      "account",
+      "method",
+      "request",
+      "tws"
+    ]
+  ],
+  [
+    "Execution object is used to maintain all data related to a user's traded orders. This can be used in both querying execution details and navigating received data. Details provided will display all information pertaining to the execution, including how many shares were filled, the price of the execution and what time it took place.",
+    [
+      "data",
+      "execution",
+      "object",
+      "orders"
+    ]
+  ],
+  [
+    "EWrapper.openOrder (orderId: int. The order's unique id contract: Contract. order: Order. orderState: OrderState) Feeds in currently open orders. Notifies the end of the open orders' reception.",
+    [
+      "contract",
+      "open",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "PendingSubmit indicates that you have transmitted the order, but have not yet received confirmation that it has been accepted by the order destination. ApiCancelled indicates that the order was received by the system but is no longer active because it was rejected or canceled. LastFillPrice: Price at which the last positions were filled.",
+    [
+      "order"
+    ]
+  ],
+  [
+    "As long as an order is active, it is possible to retrieve it using the TWS API. Orders will always be bound to the client application they were submitted from meaning only the submitting client will be able to modify the placed order. Three different methods are provided to allow for maximum flexibility.",
+    [
+      "api",
+      "client",
+      "order",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "EClient.reqCompletedOrders allows users to request all orders for the given day that are no longer modifiable. This will include orders that have that executed, been rejected, or have been cancelled by the user.",
+    [
+      "orders",
+      "request"
+    ]
+  ],
+  [
+    "The order object is an essential piece of the TWS API which is used to both place and manage orders. This is primarily built with an ever increasing range of attributes used to create the best order possible. The value to the right represents the required fields in order to place or reference any order.",
+    [
+      "api",
+      "object",
+      "order",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "EClient.exercise options are exercised or lapsed from the API with the function EClient. Exercises. Options will appear with order status side = 'BUY' and limit price of 0.",
+    [
+      "api",
+      "function",
+      "limit",
+      "options",
+      "order"
+    ]
+  ],
+  [
+    "The minimum increment is the minimum difference between price levels at which a contract can trade. Some trades have constant price increments at all price levels. Some contracts have difference minimum increments on different exchanges on which they trade.",
+    [
+      "contract"
+    ]
+  ],
+  [
+    "For EEA investment firms adhering to MiFIR reporting and opting for Enriched and Delegated Transaction Reporting, four new order attributes have been introduced in the Order class, complemented by additional presets in TWS and IB Gateway Global Configuration. The new attributes are: IBApi.Order.Mifid2DecisionMaker, IBApi.Order.Mifid2DecisionAlgo, IBApi.Order.Mifid2ExecutionTrader, and IBApi.Order.Mifid2ExecutionAlgo, used for reporting investment and execution decisions within the firm. TWS and IB Gateway Order Presets include options like TWS Decision-Maker Defaults and Executing Trader/Algo presets, located under Orders > MiFIR in Global Configuration. It's noted that the 'investment decision within the firm' does not require reporting if the investment decision is solely made by the client and if the client is not an EEA investment firm with delegated reporting. However, for orders placed where the investment decision is made by personnel within a delegated reporting firm, the IB-assigned short code of the decision maker must be transmitted using IBApi.Order.Mifid2DecisionMaker, with pre-configured defaults available through IB Account Management. In cases where the decision-making occurs via an algorithm, the program transmits the respective IB-assigned short code using IBApi.Order.Mifid2DecisionAlgo, with similar pre-configuration options for defaults as in decision-making by persons. Importantly, only one investment decision-maker, either a person or an algorithm, should be recorded on an order. Regarding 'execution within the firm', if orders are executed through a third-party interface or automatically without human intervention, no additional reporting is required. For manual execution, the responsible party's information can be included using IBApi.Order.Mifid2ExecutionTrader or IBApi.Order.Mifid2ExecutionAlgo fields. For further details on MiFIR reporting obligations, consult the associated knowledge base article.",
+    [
+      "account",
+      "algo",
+      "api",
+      "class",
+      "client"
+    ]
+  ],
+  [
+    " API orders can be modified by connecting to a session of TWS with the same username and using the same API client ID. To modify or cancel an individual order placed manually from TWS, it is necessary to connect with client ID 0 and then bind the order. The process of binding assigns the order an API order ID.",
+    [
+      "api",
+      "client",
+      "order",
+      "orders",
+      "tws"
+    ]
+  ],
+  [
+    "Orders are submitted via the EClient.placeOrder method. Advisors executing allocation orders will receive execution details and commissions for the allocation order itself. An order can be sent to TWS but not transmitted to the IB server.",
+    [
+      "allocation",
+      "execution",
+      "method",
+      "order",
+      "orders"
+    ]
+  ],
+  [
+    "By default, the Trader Workstation implements several precautionary settings that will notify customers of potential order risks. You can modify the values inside the 'Precautionary Settings' settings to be more or less restrictive. You may also set the value to '0' to disable the precaution entirely.",
+    [
+      "order"
+    ]
+  ],
+  [
+    "When placing orders via the API and building a robust trading system, it is important to monitor for callback notifications. If you experience issues with orders you place, such as orders not filling, the first thing to check is what these callbacks returned. If needed, see the API Log section, for information on obtaining your API logs or submitting them for review.",
+    [
+      "api",
+      "orders",
+      "trading"
+    ]
+  ],
+  [
+    "The TWS API supports the ability to pre-borrow shares for shorting. See here for Pre-Borrow Eligibility.",
+    [
+      "api",
+      "tws"
+    ]
+  ],
+  [
+    "From the API it is possible to check how a specified trade execution is expected to change the account margin requirements for an account in real time. This is done by creating an Order object which has the IBApi.Order.WhatIf flag set to true. If set to True, instead of sending the order to a destination the IB server it will undergo a credit check for the expected post-trade margin requirement.",
+    [
+      "account",
+      "api",
+      "execution",
+      "object",
+      "order"
+    ]
+  ],
+  [
+    "The Trigger Method defined in the IBApi.Order class specifies how simulated stop, stop-limit, and trailling stops, and conditional orders are triggered. The default method for instrument 1 is 'Double bid/ask' function, where stop orders are trigger based on two consecutive bid or ask prices.",
+    [
+      "class",
+      "function",
+      "limit",
+      "method",
+      "order"
+    ]
+  ],
+  [
+    "TWS UI Display Groups:Display Groups function allows API clients to integrate with TWS Color Grouping Windows.",
+    [
+      "api",
+      "function",
+      "tws"
+    ]
+  ],
+  [
+    "The IBApi.EClient.queryDisplayGroups method is used to request all available Display Groups in TWS. It returns a list of integers representing visible Group ID separated by the '|' character, and sorted by most used group first. This list will not change during TWS session.",
+    [
+      "method",
+      "request",
+      "tws"
+    ]
+  ],
+  [
+    "To integrate with a specific Group, you need to first subscribe to the group number. The IBApi.EWrapper.displayGroupUpdated call back is triggered once after receiving the subscription request, and will be sent again if the selected contract in the subscription group has changed.",
+    [
+      "contract",
+      "request",
+      "subscription"
+    ]
+  ],
+  [
+    "TWS Mosaic has been updated to display IBM@SMART. The update was made using the following API request: EClient.updateDisplayGroup.",
+    [
+      "api",
+      "request",
+      "smart",
+      "tws"
+    ]
+  ],
+  [
+    "Wall Street Horizon:Calendar and Event data can be retrieved from the Wall Street Horizon Event Calendar. WSH provides IBKR with corporate event datasets, including earnings dates, dividend dates, options expiration dates, splits, spinoffs.",
+    [
+      "data",
+      "ibkr",
+      "options"
+    ]
+  ],
+  [
+    "The function IBApi.EClient.reqWshMetaData is used to request available event types, or supported filter values, that may be used in the call for EClient. reqWshEventData() filter field. This request must always be called once per session prior to the function. The specific event types used to filter E client. reqwshEvent data are listed under 'meta_data' -> 'event_types'",
+    [
+      "client",
+      "data",
+      "field",
+      "function",
+      "request"
+    ]
+  ],
+  [
+    "The function EClient.reqWshEventData is used to request various calendar events from Wall Street Horizon. The event data is then received via the callback EWrapper.wshEvent data. Pending event data requests can be canceled with the function IBApi.EClient.cancelWsh event data.",
+    [
+      "data",
+      "function",
+      "request"
+    ]
+  ]
+]
